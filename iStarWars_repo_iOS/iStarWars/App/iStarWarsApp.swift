@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct iStarWarsApp: App {
+    
+    @StateObject private var coordinator = AppCoordinator()
+    
+    init() {
+        // Configure CacheManager
+        let cacheExpiryInterval = Constants.cacheExpiryInterval
+        let cacheSizeMemory = Constants.cacheSizeMemory
+        let cacheSizeDisk = Constants.cacheSizeDisk
+        let cacheDiskPath = Constants.cacheDiskPath
+        CacheManager.configure(cacheExpiryInterval: cacheExpiryInterval,
+                               cacheSizeMemory: cacheSizeMemory,
+                               cacheSizeDisk: cacheSizeDisk,
+                               cacheDiskPath: cacheDiskPath)
+    }
+    
     var body: some Scene {
         WindowGroup {
-           // ContentView()
+            NavigationStack(path: $coordinator.navigationPath) {
+                coordinator.view(for: .planetList)
+                    .environmentObject(coordinator)
+            }
         }
     }
+    
 }
