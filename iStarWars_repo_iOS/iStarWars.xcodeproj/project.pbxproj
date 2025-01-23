@@ -27,6 +27,8 @@
 		11FFF9E02D4223F100CDFCD6 /* iStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9F12D4223F300CDFCD6 /* iStarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9FB2D4223F300CDFCD6 /* iStarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FFFA272D4225F100CDFCD6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
+		11FFFA292D42260B00CDFCD6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +81,8 @@
 				11FFF9F42D4223F300CDFCD6 /* iStarWarsTests */,
 				11FFF9FE2D4223F300CDFCD6 /* iStarWarsUITests */,
 				11FFF9E12D4223F100CDFCD6 /* Products */,
+				11FFFA272D4225F100CDFCD6 /* README.md */,
+				11FFFA292D42260B00CDFCD6 /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
