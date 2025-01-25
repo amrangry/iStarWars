@@ -9,7 +9,6 @@ Display Planets
 ---------------
 ## Screenshots
 <p align="center">
-  <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true"/>
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/movie.gif?raw=true" width="30%" />
 </p>
 
@@ -21,11 +20,11 @@ Display Planets
 
 ## Topics Demonstrated in This Application  
 This project showcases the following technologies and architectural patterns:  
-- **[Clean Architecture](https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3)**  
-- **MVVM-C** - Model-View-ViewModel architecture, plus the Coordinator pattern  
-- **[Makefile](https://makefiletutorial.com/) **
-- **[Bundler](#bundler-for-dependency-management)**
-- **[CocoaPods](https://cocoapods.org/)**  
+- ** [Clean Architecture](https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3)**  
+- ** MVVM-C ** - Model-View-ViewModel architecture, plus the Coordinator pattern  
+- ** [Makefile](https://makefiletutorial.com/) **
+- ** [Bundler](#bundler-for-dependency-management)**
+- ** [CocoaPods](https://cocoapods.org/)**  
 
 ---------------
 
