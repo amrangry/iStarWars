@@ -25,6 +25,7 @@ It’s built to show off some cool iOS development techniques while keeping thin
 
 ---------------
 ## **Project Goals**  
+
 - Demonstrate **Clean Architecture** and **MVVM** in a real-world iOS app.  
 - Showcase the use of **Combine** and **Async/Await** for modern iOS development.  
 - Provide a reference for implementing **Unit Testing** in Swift.  
@@ -33,7 +34,8 @@ It’s built to show off some cool iOS development techniques while keeping thin
 This project is designed to demonstrate best practices in iOS development, making it an excellent resource for learning and reference.
 ---------------
 
-### **What’s Inside? (Technologies Used) **  
+## **What’s Inside? (Technologies Used)**
+
 - **Planet List**: Fetches and shows a list of planets from the Star Wars universe. 
 - **Swift**: The primary programming language for iOS development.
 - **SwiftUI**: A declarative framework for building dynamic UI, making it dynamic and responsive user interfaces.
@@ -75,7 +77,8 @@ A picture says a thousand words
 </div>
 
 ---------------
-### **How to Get Started**  
+### **How to Get Started**
+ 
 1. Clone the repo.  
 2. Open it in [Xcode](#Environment) check [Prerequisites](#setup-prerequisites).  
 3. Run the app to see the list of planets.  
@@ -83,7 +86,9 @@ A picture says a thousand words
 
 ---------------
 ## **Setup Prerequisites** 💻 
-### Environment  
+
+### Environment
+
 - **Xcode**: 16.2  
 - **Swift**: 5 
 
@@ -99,10 +104,12 @@ To set up the project, follow these steps:
    ```
    
 ---------------
-### Bundler for Dependency Management  
+### Bundler for Dependency Management 
+
 We use **[Bundler](https://bundler.io/)** to manage Ruby gem dependencies.  
 
 #### How to Install Bundler  
+
 1. Open Terminal and run:  
    ```bash
    gem install bundler
@@ -111,6 +118,7 @@ We use **[Bundler](https://bundler.io/)** to manage Ruby gem dependencies.
 
 ---------------
 ## **Project Structure**
+
 Here’s an overview of the folder and file structure for the **iStarWars** project:  
 
 ```
@@ -184,7 +192,8 @@ Tests/
 ```
 
 ---------------
-## **What’s Next?**  
+## **What’s Next?**
+
 Here are some ideas for future improvements:  
 - [x] **Pagination**: Load more planets as the user scrolls to the bottom of the list. 
 - [x] **Search and Filtering**: Allows users to search and filter planets by name. 
@@ -196,6 +205,7 @@ Here are some ideas for future improvements:
 
 --------------- 
 ## **Author**
+
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/2900952?s=400&u=41c504ca200e2f92638fc630e8361da78296b35c&v=4" width="180" alt="Amr Ahmed Elghadban"/>
 
@@ -219,6 +229,7 @@ Here are some ideas for future improvements:
 </div>
 
 ## **Contributing 🤘**
+
 All your feedback and help to improve this project is very welcome. Please create issues for your bugs, ideas and enhancement requests, or better yet, contribute directly by creating a PR. 😎
 
 When reporting an issue, please add a detailed instruction, and if possible a code snippet or test that can be used as a reproducer of your problem. 💥
