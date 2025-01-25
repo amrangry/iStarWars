@@ -15,6 +15,7 @@
 * **[What’s Next?](#What’s-Next?)**
 * **[Author](#Author)**
 * **[Contributing](#Contributing-🤘)**
+* **[Code of Conduct](#Code-of-Conduct)**
 * **[License](#License)**
 
 ---------------
