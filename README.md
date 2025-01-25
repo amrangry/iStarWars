@@ -3,13 +3,40 @@
   <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true"/>
 </p>
 
-## **iStarWars iOS Project**  
+* **[Overview](#overview)**
+  * [Project Goals](#project-goals)
+* **[What’s Inside? (Technologies Used)](#What’s-Inside?-(Technologies-Used))**
+* **[Screenshots](#screenshots)**
+* **[How to Get Started!](#How-to-Get-Started)**
+* **[Setup Prerequisites](#setup-prerequisites)**
+   * [Environment](#Environment)
+   * [Bundler for Dependency Management](#Bundler-for-Dependency-Management)
+* **[Project Structure](#Project Structure)**
+* **[What’s Next?](#What’s Next?)**
+* **[Author](#Author)**
+* **[Contributing 🤘](#Contributing 🤘)**
+* **[License](#License)**
+
+* **[Setup Prerequisites](#setup-prerequisites)**
+* **[Installation](#installation)**
+  * [CocoaPods](#cocoapods)
+
+
+  * [Code-less Storyboard Implementation](#code-less-storyboard-implementation)
+  * [Code Implementation](#code-implementation)
+
+* [Known Issues](#known-issues)
+* [Thank You](#thank-you)
+* [License](#license)
+
+---------------
+## **Overview**  
 
 The **iStarWars iOS Project** is a fun little app that fetches and displays a list of planets from the [Star Wars API (SWAPI)](https://swapi.dev/api).
 It’s built to show off some cool iOS development techniques while keeping things clean and easy to understand.  
 
 ---------------
-### **Project Goals**  
+## **Project Goals**  
 - Demonstrate **Clean Architecture** and **MVVM** in a real-world iOS app.  
 - Showcase the use of **Combine** and **Async/Await** for modern iOS development.  
 - Provide a reference for implementing **Unit Testing** in Swift.  
@@ -18,30 +45,10 @@ It’s built to show off some cool iOS development techniques while keeping thin
 This project is designed to demonstrate best practices in iOS development, making it an excellent resource for learning and reference.
 ---------------
 
-* **[Overview](#overview)**
-  * [Preview Samples](#preview-samples) 
-* **[Requirements](#requirements)**
-* **[Installation](#installation)**
-  * [CocoaPods](#cocoapods)
-  * [Carthage](#carthage)
-* **[Usage](#usage)**
-  * [Code-less Storyboard Implementation](#code-less-storyboard-implementation)
-  * [Code Implementation](#code-implementation)
-* **[Customization](#customization)**
-  * [SideMenuManager](#sidemenumanager)
-  * [UISideMenuNavigationController](#uisidemenunavigationcontroller)
-  * [UISideMenuNavigationControllerDelegate](#uisidemenunavigationcontrollerdelegate)
-  * [Advanced](#advanced)
-* [Known Issues](#known-issues)
-* [Thank You](#thank-you)
-* [License](#license)
-
-
 ### **What’s Inside? (Technologies Used) **  
 - **Planet List**: Fetches and shows a list of planets from the Star Wars universe. 
 - **Swift**: The primary programming language for iOS development.
-- **SwiftUI**: A declarative framework for building dynamic UI, making it dynamic and responsive user interfaces.  
-  
+- **SwiftUI**: A declarative framework for building dynamic UI, making it dynamic and responsive user interfaces.
 - **Clean Code**: The app is structured using 
  - **Clean Architecture** Separates the app into distinct layers (Presentation, Domain, and Data) for better scalability and testability, separates concerns  
     and
@@ -56,7 +63,7 @@ This project is designed to demonstrate best practices in iOS development, makin
 - **[Bundler](#bundler-for-dependency-management)**
 
 ---------------
-## Screenshots
+## **Screenshots**
 
 ```ruby
 A picture says a thousand words
@@ -87,7 +94,7 @@ A picture says a thousand words
 4. Explore the code to see how everything fits together.
 
 ---------------
-##**Setup Prerequisites** 💻 
+## **Setup Prerequisites** 💻 
 ### Environment  
 - **Xcode**: 16.2  
 - **Swift**: 5 
@@ -115,7 +122,7 @@ We use **[Bundler](https://bundler.io/)** to manage Ruby gem dependencies.
 2. For more information about Bundler, visit the [official documentation](https://bundler.io/).  
 
 ---------------
-## Project Structure  
+## **Project Structure**
 Here’s an overview of the folder and file structure for the **iStarWars** project:  
 
 ```
@@ -189,7 +196,7 @@ Tests/
 ```
 
 ---------------
-### **What’s Next?**  
+## **What’s Next?**  
 Here are some ideas for future improvements:  
 - [x] **Pagination**: Load more planets as the user scrolls to the bottom of the list. 
 - [x] **Search and Filtering**: Allows users to search and filter planets by name. 
@@ -199,9 +206,8 @@ Here are some ideas for future improvements:
 - [x] **Retry Mechanism**: Add a retry button for failed requests.  
 - [x] **Logging**: Log errors for debugging purposes. 
 
----------------
-
-## Author
+--------------- 
+## **Author**
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/2900952?s=400&u=41c504ca200e2f92638fc630e8361da78296b35c&v=4" width="180" alt="Amr Ahmed Elghadban"/>
 
@@ -224,14 +230,14 @@ Here are some ideas for future improvements:
   
 </div>
 
-## Contributing 🤘
+## **Contributing 🤘**
 All your feedback and help to improve this project is very welcome. Please create issues for your bugs, ideas and enhancement requests, or better yet, contribute directly by creating a PR. 😎
 
 When reporting an issue, please add a detailed instruction, and if possible a code snippet or test that can be used as a reproducer of your problem. 💥
 
 When creating a pull request, please adhere to the current coding style where possible, and create tests with your code so it keeps providing an awesome test coverage level 💪
 
-## License
+## **License**
 
 <details>
 <summary><strong>MIT License</strong></summary>
@@ -243,5 +249,3 @@ For more information, see the <a href="https://github.com/amrangry/iStarWars/blo
 All rights reserved.
 </p>
 </details>
-
-
