@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11B3AC432D43D9BF009CCAE0 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 11B3AC402D43D9BF009CCAE0 /* Makefile */; };
-		11B3AC442D43D9BF009CCAE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC422D43D9BF009CCAE0 /* README.md */; };
-		11B3AC452D43D9BF009CCAE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC3F2D43D9BF009CCAE0 /* LICENSE */; };
-		11B3AC462D43D9BF009CCAE0 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC3E2D43D9BF009CCAE0 /* Gemfile */; };
-		11B3AC472D43D9BF009CCAE0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC412D43D9BF009CCAE0 /* Podfile */; };
-		11B3AC482D43D9BF009CCAE0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */; };
-		11B3AC492D43D9BF009CCAE0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC3C2D43D9BF009CCAE0 /* .gitignore */; };
 		9D290F6AF9EA187CFA7A1A4A /* Pods_iStarWarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19158B4E700EBB4A348E6A40 /* Pods_iStarWarsTests.framework */; };
 		F7F6FCE103B471A77DDCCCC7 /* Pods_iStarWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB23A0264360EA9D4E8BA90B /* Pods_iStarWars.framework */; };
 		FEA61CB222EC2D4A8D7793E5 /* Pods_iStarWarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7787734E46DF70CA462EB5E9 /* Pods_iStarWarsUITests.framework */; };
@@ -43,8 +36,9 @@
 		11B3AC3E2D43D9BF009CCAE0 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		11B3AC3F2D43D9BF009CCAE0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		11B3AC402D43D9BF009CCAE0 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		11B3AC412D43D9BF009CCAE0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		11B3AC412D43D9BF009CCAE0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		11B3AC422D43D9BF009CCAE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		11E4C9382D44D4C700055DAE /* notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = notes.md; sourceTree = "<group>"; };
 		11FFF9E02D4223F100CDFCD6 /* iStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9F12D4223F300CDFCD6 /* iStarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9FB2D4223F300CDFCD6 /* iStarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +111,7 @@
 				11B3AC3F2D43D9BF009CCAE0 /* LICENSE */,
 				11B3AC402D43D9BF009CCAE0 /* Makefile */,
 				11B3AC412D43D9BF009CCAE0 /* Podfile */,
+				11E4C9382D44D4C700055DAE /* notes.md */,
 				11B3AC422D43D9BF009CCAE0 /* README.md */,
 				CA4948A780323B0AE999B927 /* Pods */,
 				5E2A4E74E566A6BFF4DB0BC6 /* Frameworks */,
@@ -274,12 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B3AC442D43D9BF009CCAE0 /* README.md in Resources */,
-				11B3AC452D43D9BF009CCAE0 /* LICENSE in Resources */,
-				11B3AC462D43D9BF009CCAE0 /* Gemfile in Resources */,
-				11B3AC472D43D9BF009CCAE0 /* Podfile in Resources */,
-				11B3AC482D43D9BF009CCAE0 /* .swiftlint.yml in Resources */,
-				11B3AC492D43D9BF009CCAE0 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +380,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B3AC432D43D9BF009CCAE0 /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
