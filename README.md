@@ -17,6 +17,26 @@ It’s built to show off some cool iOS development techniques while keeping thin
 
 This project is designed to demonstrate best practices in iOS development, making it an excellent resource for learning and reference.
 ---------------
+
+* **[Overview](#overview)**
+  * [Preview Samples](#preview-samples) 
+* **[Requirements](#requirements)**
+* **[Installation](#installation)**
+  * [CocoaPods](#cocoapods)
+  * [Carthage](#carthage)
+* **[Usage](#usage)**
+  * [Code-less Storyboard Implementation](#code-less-storyboard-implementation)
+  * [Code Implementation](#code-implementation)
+* **[Customization](#customization)**
+  * [SideMenuManager](#sidemenumanager)
+  * [UISideMenuNavigationController](#uisidemenunavigationcontroller)
+  * [UISideMenuNavigationControllerDelegate](#uisidemenunavigationcontrollerdelegate)
+  * [Advanced](#advanced)
+* [Known Issues](#known-issues)
+* [Thank You](#thank-you)
+* [License](#license)
+
+
 ### **What’s Inside? (Technologies Used) **  
 - **Planet List**: Fetches and shows a list of planets from the Star Wars universe. 
 - **Swift**: The primary programming language for iOS development.
@@ -37,6 +57,11 @@ This project is designed to demonstrate best practices in iOS development, makin
 
 ---------------
 ## Screenshots
+
+```ruby
+A picture says a thousand words
+```
+
 <p align="center">
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/movie.gif?raw=true" width="30%" />
 </p>
@@ -166,25 +191,50 @@ Tests/
 ---------------
 ### **What’s Next?**  
 Here are some ideas for future improvements:  
-- **Pagination**: Load more planets as the user scrolls to the bottom of the list. 
-- **Search and Filtering**: Allows users to search and filter planets by name. 
-- **localize Error Messages**: User-friendly messages based on error type (e.g., network error, invalid URL).
-- **Font manager**: Use font , color design.
-- **CI/CD Pipeline**: Set up using GitHub Actions or Bitrise.  
-- **Retry Mechanism**: Add a retry button for failed requests.  
-- **Logging**: Log errors for debugging purposes. 
+- [x] **Pagination**: Load more planets as the user scrolls to the bottom of the list. 
+- [x] **Search and Filtering**: Allows users to search and filter planets by name. 
+- [x] **localize Error Messages**: User-friendly messages based on error type (e.g., network error, invalid URL).
+- [x] **Font manager**: Use font , color design.
+- [x] **CI/CD Pipeline**: Set up using GitHub Actions or Bitrise.  
+- [x] **Retry Mechanism**: Add a retry button for failed requests.  
+- [x] **Logging**: Log errors for debugging purposes. 
 
 ---------------
 
 ## Author
+<div align="center">
+  <img src="https://avatars.githubusercontent.com/u/2900952?s=400&u=41c504ca200e2f92638fc630e8361da78296b35c&v=4" width="180" alt="Amr Ahmed Elghadban"/>
 
-AmrAngry, <a href="amr.elghadban@gmail.com">amr.elghadban@gmail.com</a>
+  **Amr Ahmed Elghadban (AmrAngry)**
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?logo=gmail)](mailto:amr.elghadban@gmail.com) [![WhatsApp](https://img.shields.io/badge/GitHub-Profile-blue?logo=whatsapp)](https://api.whatsapp.com/send/?phone=00971543233227&text=Hi%20&app_absent=0) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/amrelghadban/)
 
-[![Linkedin](https://img.shields.io/badge/Lets%20Connect%20via-LinkedIn-blue)](https://www.linkedin.com/in/amrelghadban/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)](https://github.com/amrangry) [![StackOverflow](https://img.shields.io/badge/StackOverflow-Profile-orange?logo=stackoverflow)](https://stackoverflow.com/users/1316779/amrangry)
 
+[![Twitter (formerly Twitter)](https://img.shields.io/badge/Twitter-Profile-blue?logo=twitter)](https://x.com/intent/follow?screen_name=amr_elghadban) [![Facebook](https://img.shields.io/badge/Facebook-Profile-blue?logo=facebook)](https://facebook.com/amr.elghadban) [![Website](https://img.shields.io/badge/Website-Visit%20Me-blue?logo=globe)](https://amrangry.github.io/)
+       <div align="center" >
+	       <a href = "https://www.buymeacoffee.com/amrangry">
+		    <img src = "https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=your-username&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"/>
+                </a>
+       </div>
+  <!--  [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20Me-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/amrangry) -->
+  <!--  [Email](mailto:amr.elghadban@gmail.com?subject=I%20checked%20your%20GitHub%20repo!): [amr.elghadban@gmail.com](mailto:amr.elghadban@gmail.com) -->
+  <!-- [![Linkedin](https://img.shields.io/badge/Lets%20Connect%20via-LinkedIn-blue)](https://www.linkedin.com/in/amrelghadban/) -->
+  <!-- [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/amr_elghadban)](https://x.com/intent/follow?screen_name=amr_elghadban) -->
+  
+</div>
+
+## Contributing 🤘
+All your feedback and help to improve this project is very welcome. Please create issues for your bugs, ideas and enhancement requests, or better yet, contribute directly by creating a PR. 😎
+
+When reporting an issue, please add a detailed instruction, and if possible a code snippet or test that can be used as a reproducer of your problem. 💥
+
+When creating a pull request, please adhere to the current coding style where possible, and create tests with your code so it keeps providing an awesome test coverage level 💪
 
 ## License
-
+<details>
+<summary>MIT License.</summary>
+Distributed under MIT License.
 iStarWars is available under the MIT license. See the [LICENSE](https://github.com/amrangry/iStarWars/blob/master/LICENSE) file for more info.
+Copyright 2025 Amr Elghadban
+</details>
