@@ -13,11 +13,6 @@ Display Planets
 </p>
 
 <div align="center">
-  <img src="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true" width="30%" />
-  <img src="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true" width="30%" />
-</div>
-
-<div align="center">
   <table>
     <tr>
       <td><img src="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true" width="100%" /></td>
