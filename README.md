@@ -232,16 +232,24 @@ Here are some ideas for future improvements:
 
 ## **Contributing 🤘**
 
-All your feedback and help to improve this project is very welcome. Please create issues for your bugs, ideas and enhancement requests, or better yet, contribute directly by creating a PR. 😎
+All your feedback and help to improve this project is very welcome. 
+Please create issues for your bugs, ideas and enhancement requests, or better yet, contribute directly by creating a PR. 😎
+
 When reporting an issue, please add a detailed instruction, and if possible a code snippet or test that can be used as a reproducer of your problem. 💥
+
 When creating a pull request, please adhere to the current coding style where possible, and create tests with your code so it keeps providing an awesome test coverage level 💪
+
 
 ## **Code of Conduct**
 
 I’m here to share my knowledge and findings as I work every day to improve our apps/demos for the community.
+
 This is a space where we work together, openly and safely, as kind and considerate human beings.
-We grow by giving and receiving positive, constructive feedback. 
+
+We grow by giving and receiving positive, constructive feedback.
+ 
 Let’s keep learning and building, one step at a time.
+
 
 ## **License**
 
