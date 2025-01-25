@@ -10,9 +10,11 @@ Display Planets
 
 ---------------
 ## Screenshots
-  <img src ="https://github.com/amrangry/iStarWars/blob/main/media/movie.gif?raw=true"/>
-  <img src ="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true"/>
-  <img src ="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true"/>
+ <div align="center">
+  <img src="https://github.com/amrangry/iStarWars/blob/main/media/movie.gif?raw=true" width="30%" />
+  <img src="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true" width="30%" />
+  <img src="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true" width="30%" />
+</div>
 ---------------
 
 ## Topics Demonstrated in This Application  
