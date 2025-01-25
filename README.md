@@ -237,10 +237,11 @@ When creating a pull request, please adhere to the current coding style where po
 <summary><strong>MIT License</strong></summary>
 <p>
 iStarWars is distributed under the MIT License.  
-For more information, see the [LICENSE](https://github.com/amrangry/iStarWars/blob/master/LICENSE) file.  
+For more information, see the <a href="https://github.com/amrangry/iStarWars/blob/master/LICENSE" target="_blank">LICENSE</a> file.  
 
 &copy; 2025 Amr Elghadban  
 All rights reserved.
 </p>
 </details>
+
 
