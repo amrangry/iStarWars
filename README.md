@@ -232,10 +232,15 @@ When reporting an issue, please add a detailed instruction, and if possible a co
 When creating a pull request, please adhere to the current coding style where possible, and create tests with your code so it keeps providing an awesome test coverage level 💪
 
 ## License
+
 <details>
-<summary>MIT License.</summary>
-Distributed under MIT License.
-iStarWars is available under the MIT license.
-See the [LICENSE](https://github.com/amrangry/iStarWars/blob/master/LICENSE) file for more info.
-Copyright 2025 Amr Elghadban
+<summary><strong>MIT License</strong></summary>
+<p>
+iStarWars is distributed under the MIT License.  
+For more information, see the [LICENSE](https://github.com/amrangry/iStarWars/blob/master/LICENSE) file.  
+
+&copy; 2025 Amr Elghadban  
+All rights reserved.
+</p>
 </details>
+
