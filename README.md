@@ -1,10 +1,39 @@
 # iStarWars  
-**iStarWars iOS Project**  
-Display Planets  
-
 <p align="center">
   <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true"/>
 </p>
+
+## **iStarWars iOS Project**  
+
+The **iStarWars iOS Project** is a fun little app that fetches and displays a list of planets from the [Star Wars API (SWAPI)](https://swapi.dev/api).
+It’s built to show off some cool iOS development techniques while keeping things clean and easy to understand.  
+
+---------------
+### **Project Goals**  
+- Demonstrate **Clean Architecture** and **MVVM** in a real-world iOS app.  
+- Showcase the use of **Combine** and **Async/Await** for modern iOS development.  
+- Provide a reference for implementing **Unit Testing** in Swift.  
+- Highlight the power of **SwiftUI** for building dynamic and responsive UIs.  
+
+This project is designed to demonstrate best practices in iOS development, making it an excellent resource for learning and reference.
+---------------
+### **What’s Inside? (Technologies Used) **  
+- **Planet List**: Fetches and shows a list of planets from the Star Wars universe. 
+- **Swift**: The primary programming language for iOS development.
+- **SwiftUI**: A declarative framework for building dynamic UI, making it dynamic and responsive user interfaces.  
+  
+- **Clean Code**: The app is structured using 
+ - **Clean Architecture** Separates the app into distinct layers (Presentation, Domain, and Data) for better scalability and testability, separates concerns  
+    and
+ - **MVVM-C**: Model-View-ViewModel architecture with Coordinators for navigation and separation of concerns that ensures a clear separation between the UI, business logic, and data layers.   
+- **Modern Tools**: 
+  - Uses **Combine**: Used for reactive programming and state management, enabling seamless data flow and updates.
+  - And **Async/Await**: Modern concurrency techniques for efficient and readable asynchronous code.
+- **Caching**: Implemented with `URLCache` for offline support.  
+- **Testing**: Comes with **Unit Tests** to make sure everything works as expected.  
+- **[CocoaPods](https://cocoapods.org/)**: For dependency management (e.g., SwiftLint). 
+- **[Makefile](https://makefiletutorial.com/)**
+- **[Bundler](#bundler-for-dependency-management)**
 
 ---------------
 ## Screenshots
@@ -26,38 +55,41 @@ Display Planets
 </div>
 
 ---------------
-
-## Topics Demonstrated in This Application  
-This project showcases the following technologies and architectural patterns:  
-- **Clean Architecture**  
-- **MVVM-C** - Model-View-ViewModel architecture, plus the Coordinator pattern  
-- **[Makefile](https://makefiletutorial.com/) **
-- **[Bundler](#bundler-for-dependency-management)**
-- **[CocoaPods](https://cocoapods.org/)**  
+### **How to Get Started**  
+1. Clone the repo.  
+2. Open it in [Xcode](#Environment) check [Prerequisites](#setup-prerequisites).  
+3. Run the app to see the list of planets.  
+4. Explore the code to see how everything fits together.
 
 ---------------
-
-## Environment  
+##**Setup Prerequisites** 💻 
+### Environment  
 - **Xcode**: 16.2  
-- **Swift**: 5  
+- **Swift**: 5 
 
----------------
-
-## Setup Prerequisites 💻  
 To set up the project, follow these steps:  
 
 1. Open Terminal and navigate to the project folder:  
    ```bash
    cd /path/to/iStarWars
    ```
-
 2. Run the following command to set up the project:  
    ```bash
    make start
    ```
+   
+---------------
+### Bundler for Dependency Management  
+We use **[Bundler](https://bundler.io/)** to manage Ruby gem dependencies.  
+
+#### How to Install Bundler  
+1. Open Terminal and run:  
+   ```bash
+   gem install bundler
+   ```
+2. For more information about Bundler, visit the [official documentation](https://bundler.io/).  
 
 ---------------
-
 ## Project Structure  
 Here’s an overview of the folder and file structure for the **iStarWars** project:  
 
@@ -132,104 +164,27 @@ Tests/
 ```
 
 ---------------
-
-## Key Features  
-### 1. Modern Architecture  
-- **MVVM-C**: Model-View-ViewModel architecture with Coordinators for navigation and separation of concerns.  
-- **Dependency Injection**: Improves testability and modularity.  
-
-### 2. Advanced UI/UX  
-- **SwiftUI**: Used for building the UI with advanced animations and transitions.  
-- **Shimmer Effects**: Added for loading states.  
-
-### 3. State Management  
-- **Combine**: Used for reactive programming and state management.  
-- **Redux-like State Management**: Ensures a single source of truth.  
-
-### 4. Networking  
-- **Async/Await**: Modern networking with async/await.  
-- **Caching**: Implemented with `URLCache` or Core Data for offline support.  
-
-### 5. Testing  
-- **Unit Tests**: For business logic and ViewModels.  
-- **UI Tests**: For testing the user interface.  
-
-### 6. Advanced Features  
-- **Pagination**: Infinite scrolling for loading more planets.  
-- **Search and Filtering**: Allows users to search and filter planets by name.  
-- **Swift Charts/Lottie**: For data visualization and animations.  
-
-### 7. DevOps  
+### **What’s Next?**  
+Here are some ideas for future improvements:  
+- **Pagination**: Load more planets as the user scrolls to the bottom of the list. 
+- **Search and Filtering**: Allows users to search and filter planets by name. 
+- **localize Error Messages**: User-friendly messages based on error type (e.g., network error, invalid URL).
+- **Font manager**: Use font , color design.
 - **CI/CD Pipeline**: Set up using GitHub Actions or Bitrise.  
-- **Code Quality**: Enforced with SwiftLint and SwiftFormat.  
-
----------------
-
-## Implementation Details  
-### 1. MVVM-C Architecture  
-- **Coordinator**: Handles navigation and flow control.  
-- **ViewModel**: Manages business logic and state.  
-- **View**: Displays the UI.  
-
-### 2. Dependency Injection  
-- Dependencies (e.g., `NetworkManager`) are passed to the ViewModel for better testability.  
-
-### 3. Advanced UI/UX  
-- **Shimmer Effects**: Added for loading states.  
-- **Lottie Animations**: Used for a polished look.  
-
-### 4. Async/Await Networking  
-- The `NetworkManager` is updated to use async/await for modern networking.  
-
----------------
-
-## Future Enhancements  
-### 1. Pagination  
-- Load more planets as the user scrolls to the bottom of the list.  
-
-### 2. Search  
-- Add a search bar to filter planets by name.  
-
-### 3. Detail View  
-- Create a `PlanetDetailView` to show more details about a selected planet.  
-
-### 4. Error Handling  
-- Improve error handling and display user-friendly messages.  
-
-### 5. Splash Screen  
-- Add a splash screen using `LaunchScreen.storyboard`.  
-
-### 6. Code Quality  
-- Use **SwiftLint** and **SwiftFormat** for code consistency.  
-
-### 7. CI/CD Pipeline  
-- Set up a CI/CD pipeline using **GitHub Actions** or **Bitrise**.  
-
----------------
-
-## Error Handling  
-### Key Features  
-- **Custom Error Messages**: User-friendly messages based on error type (e.g., network error, invalid URL).  
 - **Retry Mechanism**: Add a retry button for failed requests.  
-- **Logging**: Log errors for debugging purposes.  
-
-### Testing Error Scenarios  
-- **Network Errors**: Disable the network connection or modify the API URL to simulate errors.  
-- **Decoding Errors**: Modify the API response to return invalid JSON.  
-- **Unknown Errors**: Introduce unexpected errors (e.g., force unwrap a nil value).  
-```
+- **Logging**: Log errors for debugging purposes. 
 
 ---------------
 
-### Bundler for Dependency Management  
-We use **[Bundler](https://bundler.io/)** to manage Ruby gem dependencies.  
+## Author
 
-#### How to Install Bundler  
-1. Open Terminal and run:  
-   ```bash
-   gem install bundler
-   ```
+AmrAngry, <a href="amr.elghadban@gmail.com">amr.elghadban@gmail.com</a>
 
-2. For more information about Bundler, visit the [official documentation](https://bundler.io/).  
+[![Twitter Follow](https://img.shields.io/twitter/follow/amr_elghadban?style=social)](https://twitter.com/intent/follow?screen_name=amr_elghadban)
 
----------------
+[![Linkedin](https://img.shields.io/badge/Lets%20Connect%20via-LinkedIn-blue)](https://www.linkedin.com/in/amrelghadban/)
+
+
+## License
+
+iStarWars is available under the MIT license. See the [LICENSE](https://github.com/amrangry/iStarWars/blob/master/LICENSE) file for more info.
