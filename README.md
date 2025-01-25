@@ -20,18 +20,20 @@
 ---------------
 ## **Overview**  
 
-The **iStarWars iOS Project** is a fun little app that fetches and displays a list of planets from the [Star Wars API (SWAPI)](https://swapi.dev/api).
+The **iStarWars iOS Project** is a fun little app that fetches and displays a list of planets
+from the [Star Wars API (SWAPI)](https://swapi.dev/api).
 It’s built to show off some cool iOS development techniques while keeping things clean and easy to understand.  
 
 ---------------
 ## **Project Goals**  
+
+This project is designed to demonstrate best practices in iOS development, making it an excellent resource for learning and reference.
 
 - Demonstrate **Clean Architecture** and **MVVM** in a real-world iOS app.  
 - Showcase the use of **Combine** and **Async/Await** for modern iOS development.  
 - Provide a reference for implementing **Unit Testing** in Swift.  
 - Highlight the power of **SwiftUI** for building dynamic and responsive UIs.  
 
-This project is designed to demonstrate best practices in iOS development, making it an excellent resource for learning and reference.
 ---------------
 
 ## **What’s Inside? (Technologies Used)**
