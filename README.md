@@ -16,15 +16,29 @@ Display Planets
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true" width="30%" />
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true" width="30%" />
 </div>
+
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true" width="100%" /></td>
+      <td><img src="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true" width="100%" /></td>
+    </tr>
+    <tr>
+      <td align="center">Splash Screen</td>
+      <td align="center">Planet List</td>
+    </tr>
+  </table>
+</div>
+
 ---------------
 
 ## Topics Demonstrated in This Application  
 This project showcases the following technologies and architectural patterns:  
-- ** [Clean Architecture](https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3)**  
-- ** MVVM-C ** - Model-View-ViewModel architecture, plus the Coordinator pattern  
-- ** [Makefile](https://makefiletutorial.com/) **
-- ** [Bundler](#bundler-for-dependency-management)**
-- ** [CocoaPods](https://cocoapods.org/)**  
+- **Clean Architecture**  
+- **MVVM-C** - Model-View-ViewModel architecture, plus the Coordinator pattern  
+- **[Makefile](https://makefiletutorial.com/) **
+- **[Bundler](#bundler-for-dependency-management)**
+- **[CocoaPods](https://cocoapods.org/)**  
 
 ---------------
 
