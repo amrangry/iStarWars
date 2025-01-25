@@ -4,30 +4,18 @@
 </p>
 
 * **[Overview](#overview)**
-  * [Project Goals](#project-goals)
+* **[Project Goals](#project-goals)
 * **[What’s Inside? (Technologies Used)](#What’s-Inside?-(Technologies-Used))**
 * **[Screenshots](#screenshots)**
 * **[How to Get Started!](#How-to-Get-Started)**
 * **[Setup Prerequisites](#setup-prerequisites)**
    * [Environment](#Environment)
    * [Bundler for Dependency Management](#Bundler-for-Dependency-Management)
-* **[Project Structure](#Project Structure)**
-* **[What’s Next?](#What’s Next?)**
+* **[Project Structure](#Project-Structure)**
+* **[What’s Next?](#What’s-Next?)**
 * **[Author](#Author)**
-* **[Contributing 🤘](#Contributing 🤘)**
+* **[Contributing 🤘](#Contributing-🤘)**
 * **[License](#License)**
-
-* **[Setup Prerequisites](#setup-prerequisites)**
-* **[Installation](#installation)**
-  * [CocoaPods](#cocoapods)
-
-
-  * [Code-less Storyboard Implementation](#code-less-storyboard-implementation)
-  * [Code Implementation](#code-implementation)
-
-* [Known Issues](#known-issues)
-* [Thank You](#thank-you)
-* [License](#license)
 
 ---------------
 ## **Overview**  
