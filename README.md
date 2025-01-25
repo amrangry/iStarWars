@@ -2,6 +2,17 @@
 **iStarWars iOS Project**  
 Display Planets  
 
+<p align="center">
+  <img src ="https://github.com/amrangry/iStarWars/blob/master/logo.png?raw=true"/>
+  <img src ="https://github.com/amrangry/ClockWise/blob/master/clock.gif?raw=true"/>
+</p>
+
+
+---------------
+## Screenshots
+  <img src ="https://github.com/amrangry/iStarWars/blob/main/media/movie.gif?raw=true"/>
+  <img src ="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true"/>
+  <img src ="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true"/>
 ---------------
 
 ## Topics Demonstrated in This Application  
