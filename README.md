@@ -4,7 +4,7 @@
 </p>
 
 * **[Overview](#overview)**
-* **[Project Goals](#project-goals)
+* **[Project Goals](#project-goals)**
 * **[What’s Inside? (Technologies Used)](#What’s-Inside?-(Technologies-Used))**
 * **[Screenshots](#screenshots)**
 * **[How to Get Started!](#How-to-Get-Started)**
@@ -14,7 +14,7 @@
 * **[Project Structure](#Project-Structure)**
 * **[What’s Next?](#What’s-Next?)**
 * **[Author](#Author)**
-* **[Contributing 🤘](#Contributing-🤘)**
+* **[Contributing](#Contributing-🤘)**
 * **[License](#License)**
 
 ---------------
