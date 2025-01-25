@@ -3,15 +3,17 @@
 Display Planets  
 
 <p align="center">
-  <img src ="https://github.com/amrangry/iStarWars/blob/master/logo.png?raw=true"/>
-  <img src ="https://github.com/amrangry/ClockWise/blob/master/clock.gif?raw=true"/>
+  <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true"/>
 </p>
-
 
 ---------------
 ## Screenshots
- <div align="center">
+<p align="center">
+  <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true"/>
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/movie.gif?raw=true" width="30%" />
+</p>
+
+<div align="center">
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/splash.png?raw=true" width="30%" />
   <img src="https://github.com/amrangry/iStarWars/blob/main/media/planet_list.png?raw=true" width="30%" />
 </div>
