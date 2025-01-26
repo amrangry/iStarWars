@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E4C9AD2D454D0D00055DAE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */; };
 		9D290F6AF9EA187CFA7A1A4A /* Pods_iStarWarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19158B4E700EBB4A348E6A40 /* Pods_iStarWarsTests.framework */; };
 		F7F6FCE103B471A77DDCCCC7 /* Pods_iStarWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB23A0264360EA9D4E8BA90B /* Pods_iStarWars.framework */; };
 		FEA61CB222EC2D4A8D7793E5 /* Pods_iStarWarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7787734E46DF70CA462EB5E9 /* Pods_iStarWarsUITests.framework */; };
@@ -158,11 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11FFFA052D4223F300CDFCD6 /* Build configuration list for PBXNativeTarget "iStarWars" */;
 			buildPhases = (
-				16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */,
+				11FFFAF62D42D17400CDFCD6 /* SwifLint */,
 				11FFF9DC2D4223F100CDFCD6 /* Sources */,
 				11FFF9DD2D4223F100CDFCD6 /* Frameworks */,
 				11FFF9DE2D4223F100CDFCD6 /* Resources */,
-				11FFFAF62D42D17400CDFCD6 /* SwifLint */,
+				16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */,
 			);
 			buildRules = (
 			);
@@ -269,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E4C9AD2D454D0D00055DAE /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# \"${PODS_ROOT}/SwiftLint/swiftlint\"\n# $SRCROOT/BuildPhasesScripts/SwiftLintRunScript.sh\n";
+			shellScript = "$SRCROOT/BuildPhasesScripts/SwiftLintRunScript.sh\n\n";
 		};
 		16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
