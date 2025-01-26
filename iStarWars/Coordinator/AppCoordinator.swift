@@ -14,19 +14,7 @@ class AppCoordinator: ObservableObject {
     @Published var navigationPath = [NavigationPath]()
     
     private let sceneConfigurator = SceneConfigurator.shared
-    
-    func start() {
-        // Initialize dependencies using the SceneConfigurator
-        let planetViewModel = sceneConfigurator.configurePlanetViewModel()
-        
-        // Create the PlanetsCoordinator and pass the dependencies
-        let planetsCoordinator = PlanetsCoordinator(viewModel: planetViewModel)
-        planetsCoordinator.start()
-        
-        // Navigate to the PlanetListView
-        navigate(to: .planetList)
-    }
-    
+
     func navigate(to path: NavigationPath) {
         navigationPath.append(path)
     }
