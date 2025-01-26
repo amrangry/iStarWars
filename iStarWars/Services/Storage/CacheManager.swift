@@ -7,7 +7,8 @@
 
 import Foundation
 
-class CacheManager {
+/// `CacheManager`  conform `CacheManagerProtocol` that handle caching operations.
+class CacheManager: CacheManagerProtocol {
     
     static let shared = CacheManager()
     private var cache: URLCache
