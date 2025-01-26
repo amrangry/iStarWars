@@ -136,8 +136,9 @@ iStarWars/
 │   ├── SceneConfigurator.swift
 ├── Modules/
 │   ├── Planets/
-│   │   ├── Coordinators/
-│   │   │   ├── PlanetsCoordinator.swift
+│   │   ├── Configurator/
+│   │   │   ├── PlanetsConfigurator.swift
+│   │   │   ├── PlanetDetailsConfigurator.swift
 │   │   ├── Models/
 │   │   │   ├── Planet.swift
 │   │   │   ├── PlanetsResponse.swift
@@ -149,8 +150,8 @@ iStarWars/
 │   │   │   ├── FetchPlanetsUseCase.swift
 │   │   │   ├── FetchPlanetDetailsUseCase.swift
 │   │   ├── ViewModels/
-│   │   │   ├── PlanetViewModel.swift
-│   │   │   ├── FetchPlanetDetailsUseCase.swift
+│   │   │   ├── PlanetsViewModel.swift
+│   │   │   ├── PlanetDetailsViewModel.swift
 │   │   ├── Views/
 │   │   │   ├── PlanetListView.swift
 │   │   │   ├── PlanetRowView.swift
