@@ -7,7 +7,7 @@
 
 import Foundation
 
-//Mock URLProtocol to intercept network requests and provide mock responses
+// Mock URLProtocol to intercept network requests and provide mock responses
 class MockURLProtocol: URLProtocol {
     
     static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data))?

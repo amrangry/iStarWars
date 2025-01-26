@@ -11,7 +11,7 @@ final class iStarWarsUITestsLaunchTests: XCTestCase { // swiftlint:disable:this 
 
     let app = XCUIApplication()
 
-    //swiftlint:disable:next static_over_final_class
+    // swiftlint:disable:next static_over_final_class
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

@@ -14,7 +14,7 @@ class APIClientTests: XCTestCase {
     
     var apiClient: APIClient!
     var cancellables: Set<AnyCancellable>!
-    let baseURL = URL(string: "https://amrangry.github.io/api/data")! //swiftlint:disable:this force_unwrapping
+    let baseURL = URL(string: "https://amrangry.github.io/api/data")! // swiftlint:disable:this force_unwrapping
     
     override func setUp() {
         super.setUp()
@@ -41,8 +41,8 @@ class APIClientTests: XCTestCase {
         
         // Set up mock request handler
         MockURLProtocol.requestHandler = { request in
-            let url = request.url! //swiftlint:disable:this force_unwrapping
-            let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)! //swiftlint:disable:this line_length force_unwrapping
+            let url = request.url! // swiftlint:disable:this force_unwrapping
+            let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)! // swiftlint:disable:this line_length force_unwrapping
             return (response, mockData)
         }
         
@@ -59,7 +59,7 @@ class APIClientTests: XCTestCase {
     func testAsyncRequestFailure() async {
         // Set up mock request handler to simulate a server error
         MockURLProtocol.requestHandler = { request in
-            let response = HTTPURLResponse(url: request.url!, statusCode: 500, httpVersion: nil, headerFields: nil)!  //swiftlint:disable:this line_length force_unwrapping
+            let response = HTTPURLResponse(url: request.url!, statusCode: 500, httpVersion: nil, headerFields: nil)!  // swiftlint:disable:this line_length force_unwrapping
             return (response, Data())
         }
         
@@ -80,7 +80,7 @@ class APIClientTests: XCTestCase {
         
         // Set up mock request handler
         MockURLProtocol.requestHandler = { request in
-            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!  //swiftlint:disable:this line_length force_unwrapping
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!  // swiftlint:disable:this line_length force_unwrapping
             return (response, mockData)
         }
         
@@ -108,7 +108,7 @@ class APIClientTests: XCTestCase {
     func testCombineRequestFailure() {
         // Set up mock request handler to simulate a server error
         MockURLProtocol.requestHandler = { request in
-            let response = HTTPURLResponse(url: request.url!, statusCode: 500, httpVersion: nil, headerFields: nil)!  //swiftlint:disable:this line_length force_unwrapping
+            let response = HTTPURLResponse(url: request.url!, statusCode: 500, httpVersion: nil, headerFields: nil)!  // swiftlint:disable:this line_length force_unwrapping
             return (response, Data())
         }
         
@@ -124,7 +124,7 @@ class APIClientTests: XCTestCase {
                         XCTAssertTrue(error is URLError)
                         expectation.fulfill()
                 }
-            }, receiveValue: { (model: MockResponse) in //swiftlint:disable:this unused_closure_parameter
+            }, receiveValue: { (model: MockResponse) in // swiftlint:disable:this unused_closure_parameter
                 XCTFail("Expected request to fail, but it succeeded.")
             })
             .store(in: &cancellables)

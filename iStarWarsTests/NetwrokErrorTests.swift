@@ -11,42 +11,42 @@ import XCTest
 class NetworkErrorTests: XCTestCase {
     
     func testNoInternetConnection() {
-        //Give
+        // Give
         let error = NetworkError.noInternetConnection
-        //When
+        // When
         let message = error.localizedDescription
-        //Then
+        // Then
         XCTAssertNotNil(message, "Error message should not be nil")
         XCTAssertEqual(message, "No Internet Connection", "Error message should matched")
     }
     
     func testInvalidURL() {
-        //Give
+        // Give
         let error = NetworkError.invalidURL
-        //When
+        // When
         let message = error.localizedDescription
-        //Then
+        // Then
         XCTAssertNotNil(message, "Error message should not be nil")
         XCTAssertEqual(message, "Invalid URL", "Error message should matched")
     }
     
     func testTimeout() {
-        //Give
+        // Give
         let error = NetworkError.timeout
-        //When
+        // When
         let message = error.localizedDescription
-        //Then
+        // Then
         XCTAssertNotNil(message, "Error message should not be nil")
         XCTAssertEqual(message, "Timeout", "Error message should matched")
     }
     
     func testNetworkErrorWithDescription() {
-        //Give
+        // Give
         let testDescription = "Test Description"
         let error = NetworkError.networkError(description: testDescription)
-        //When
+        // When
         let message = error.localizedDescription
-        //Then
+        // Then
         XCTAssertNotNil(message, "Error message should not be nil")
         XCTAssertEqual(message, "Network Error: \(testDescription)", "Error message should matched")
     }

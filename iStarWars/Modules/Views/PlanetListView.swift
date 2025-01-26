@@ -14,11 +14,11 @@ struct PlanetListView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
     
     var body: some View {
-        //        NavigationView {
+        // NavigationView {
         NavigationStack(path: $coordinator.navigationPath) {
             List {
                 if viewModel.isLoading {
-                    //ProgressView()
+                    // ProgressView()
                     ForEach(0..<5) { _ in
                         ShimmerView()
                             .frame(height: 100)
@@ -50,6 +50,6 @@ struct PlanetListView: View {
     
 }
 
-//#Preview {
+// #Preview {
 //    PlanetListView()
-//}
+// }
