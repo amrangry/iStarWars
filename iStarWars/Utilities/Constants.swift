@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Application typealias 
+typealias DataClientProtocol = APIClientProtocol
+
 /// Application Constants
 struct Constants {
     
