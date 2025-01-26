@@ -9,9 +9,9 @@ import Foundation
 
 /// Planets extension
 extension Planet {
-    /**
-     The mockPlanet object provides sample data for the preview.
-     */
+  
+    /// The mockPlanet object provides sample data for the preview.
+    /// - Returns: `Planet`
     static func mock() -> Planet {
         let mockPlanet = Planet(
             identifier: "1", // Unique identifier for the planet

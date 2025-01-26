@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Application typealias 
+/// Application typealias
 typealias DataClientProtocol = APIClientProtocol
 
 /// Application Constants

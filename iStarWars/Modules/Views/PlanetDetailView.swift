@@ -63,4 +63,5 @@ struct PlanetDetailView: View {
             viewModel.fetchPlanetDetails()
         }
     }
+    
 }

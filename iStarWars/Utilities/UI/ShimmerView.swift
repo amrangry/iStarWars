@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// temp view whiel loading
+/// ShimmerView istemp view whiel loading
 struct ShimmerView: View {
     
     @State private var isAnimating = false

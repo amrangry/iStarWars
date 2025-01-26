@@ -11,6 +11,7 @@ import Combine
 /// It communicates with the Repository to fetch data.
 /// The FetchPlanetsUseCase acts as a bridge between the PlanetViewModel and the PlanetRepository
 class FetchPlanetsUseCase {
+    
     private let repository: PlanetRepositoryProtocol
     
     init(repository: PlanetRepositoryProtocol = PlanetRepository()) {

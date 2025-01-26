@@ -46,4 +46,5 @@ class PlanetDetailsViewModel: ObservableObject {
             }
         }
     }
+    
 }
