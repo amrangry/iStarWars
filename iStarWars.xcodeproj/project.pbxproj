@@ -315,11 +315,13 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"if which swiftlint >/dev/null; then\n    swiftlint\n    touch \"$TEMP_DIR/swiftlint_$CONFIGURATION\"\nelse\n    echo \"SwiftLint not installed. Download from https://github.com/realm/SwiftLint\"\nfi\n",
 			);
 			name = SwifLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$TEMP_DIR/swiftlint_$CONFIGURATION\n",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
