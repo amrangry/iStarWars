@@ -74,12 +74,12 @@ trailing_whitespace:
 
 custom_rules:
     # To avoid visual noise we eschew the auto-generated Xcode template documentation.
-    xcode_template_documentation:
-        match_kinds:
-            - comment
-        message: "No need for the xcode template documentation. Please remove it!"
-        regex: '^\/{2}\n\/{2}\s{2}[A-z]*.swift\n\/{2}\s*[A-z]*\n\/{2}\n\/{2}\s{2}Created'
-        severity: error
+#    xcode_template_documentation:
+#        match_kinds:
+#            - comment
+#        message: "No need for the xcode template documentation. Please remove it!"
+#        regex: '^\/{2}\n\/{2}\s{2}[A-z]*.swift\n\/{2}\s*[A-z]*\n\/{2}\n\/{2}\s{2}Created'
+#        severity: error
     rule_id:
         # included: Source/YourProject/Rules/\w+\.swift # Adjust this path to your project's structure
         name: Rule ID
@@ -87,12 +87,24 @@ custom_rules:
         regex: identifier:\s*("\w+_rule"|"\S*[^a-z_]\S*")
         severity: error
 
+#identifier_name:
+#    min_length: 2 # only warning
+#    max_length: 30 # warning and error
+#    warning: 20
+#    error: 30
+#    excluded: # excluded via string array
+#    - id
+#    - URL
+#    - GlobalAPIKey
+#    - by
+#    - vc
+#    - en
+#    - ar
+#    - to
+#    - ad
+    
 identifier_name:
-    min_length: 2 # only warning
-    max_length: 30 # warning and error
-    warning: 20
-    error: 30
-    excluded: # excluded via string array
+  excluded: # excluded via string array
     - id
     - URL
     - GlobalAPIKey
@@ -102,16 +114,14 @@ identifier_name:
     - ar
     - to
     - ad
-
+    
 type_name:
-    min_length: 2 # only warning
-    max_length: 30 # warning and error
-    warning: 20
-    error: 30
-    excluded:
+  min_length: 2 # only warning
+  max_length: 30 # warning and error
+  excluded:
     - iStarWarsUITests
     - iStarWarsTests
-
+    
 force_cast: warning # implicitly
 
 force_try:
@@ -130,10 +140,8 @@ file_name:
     excluded:
     - main.swift
     #- <iGeneratedFile.swift> # Add other files as needed
+        
 nesting:
-    type_level:
-        warning: 3 # warning appears if you nest 3 levels deep
-        error: 6
-    statement_level:
-        warning: 5
-        error: 10
+  type_level:
+    warning: 3 # warning appears if you nest 3 levels deep
+    error: 6
