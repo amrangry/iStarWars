@@ -1,5 +1,5 @@
 # if using cocapods
-#${PODS_ROOT}/SwiftLint/swiftlint
+${PODS_ROOT}/SwiftLint/swiftlint
 #"${PODS_ROOT}/SwiftLint/swiftlint"
 #"${PODS_ROOT}/SwiftLint/swiftlint" lint --config "${SRCROOT}/.swiftlint.yml"
 #"${PODS_ROOT}/SwiftLint/swiftlint" lint --strict
