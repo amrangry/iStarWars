@@ -95,6 +95,14 @@ A picture says a thousand words
 - **Xcode**: 16.2  
 - **Swift**: 5 
 
+### Branch-Specific Configuration 🚀
+**Main Branch**
+- Dependency Management: Using Swift Package Manager (SPM).
+- No CocoaPods or additional scripts required.
+
+**Other Branch**
+- Dependency Management: Using CocoaPods and requires running a setup script.
+
 To set up the project, follow these steps:  
 
 1. Open Terminal and navigate to the project folder:  
@@ -105,7 +113,6 @@ To set up the project, follow these steps:
    ```bash
    make start
    ```
-   
 ---------------
 ### Bundler for Dependency Management 
 
