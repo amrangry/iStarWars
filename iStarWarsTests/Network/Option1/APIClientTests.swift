@@ -10,13 +10,6 @@ import Combine
 @testable import iStarWars
 
 // MARK: - Test Model
-
-struct MyUnitTestModel: Decodable {
-    let id: Int
-    let name: String
-}
-
-// MARK: - Test Model
 class APIClientTests: XCTestCase {
     
     var apiClient: APIClient!
@@ -44,12 +37,7 @@ class APIClientTests: XCTestCase {
     
     func testAsyncRequestSuccess() async {
         // Mock response data
-        let mockData = """
-        {
-            "id": 1,
-            "name": "Test"
-        }
-        """.data(using: .utf8)!
+        let mockData = MockResponse.getMockedData()
         
         // Set up mock request handler
         MockURLProtocol.requestHandler = { request in
@@ -59,9 +47,9 @@ class APIClientTests: XCTestCase {
         
         do {
             let url = baseURL
-            let model: MyUnitTestModel = try await apiClient.request(url)
-            XCTAssertEqual(model.id, 1)
-            XCTAssertEqual(model.name, "Test")
+            let model: MockResponse = try await apiClient.request(url)
+            XCTAssertEqual(model.id, MockResponse.getMockedId())
+            XCTAssertEqual(model.name, MockResponse.getMockedName())
         } catch {
             XCTFail("Request failed with error: \(error)")
         }
@@ -76,7 +64,7 @@ class APIClientTests: XCTestCase {
         
         do {
             let url = baseURL
-            let _: MyUnitTestModel = try await apiClient.request(url)
+            let _: MockResponse = try await apiClient.request(url)
             XCTFail("Expected request to fail, but it succeeded.")
         } catch {
             XCTAssertTrue(error is URLError)
@@ -87,12 +75,7 @@ class APIClientTests: XCTestCase {
     
     func testCombineRequestSuccess() {
         // Mock response data
-        let mockData = """
-        {
-            "id": 1,
-            "name": "Test"
-        }
-        """.data(using: .utf8)!
+        let mockData = MockResponse.getMockedData()
         
         // Set up mock request handler
         MockURLProtocol.requestHandler = { request in
@@ -111,9 +94,9 @@ class APIClientTests: XCTestCase {
                     case .failure(let error):
                         XCTFail("Request failed with error: \(error)")
                 }
-            }, receiveValue: { (model: MyUnitTestModel) in
-                XCTAssertEqual(model.id, 1)
-                XCTAssertEqual(model.name, "Test")
+            }, receiveValue: { (model: MockResponse) in
+                XCTAssertEqual(model.id, MockResponse.getMockedId())
+                XCTAssertEqual(model.name, MockResponse.getMockedName())
                 expectation.fulfill()
             })
             .store(in: &cancellables)
@@ -140,11 +123,12 @@ class APIClientTests: XCTestCase {
                         XCTAssertTrue(error is URLError)
                         expectation.fulfill()
                 }
-            }, receiveValue: { (model: MyUnitTestModel) in
+            }, receiveValue: { (model: MockResponse) in
                 XCTFail("Expected request to fail, but it succeeded.")
             })
             .store(in: &cancellables)
         
         wait(for: [expectation], timeout: 1)
     }
+    
 }
