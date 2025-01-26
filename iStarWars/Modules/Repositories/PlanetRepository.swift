@@ -13,8 +13,7 @@ class PlanetRepository: PlanetRepositoryProtocol {
     
     private let apiClient: DataClientProtocol
     private let cacheManager: CacheManagerProtocol
-    
-    
+
     init(apiClient: DataClientProtocol = APIClient.shared, cacheManager: CacheManagerProtocol = CacheManager.shared) {
         self.apiClient = apiClient
         self.cacheManager = cacheManager

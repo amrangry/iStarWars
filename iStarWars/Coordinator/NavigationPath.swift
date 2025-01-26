@@ -11,6 +11,7 @@ import Foundation
 enum NavigationPath: Hashable, Equatable {
     
     case planetList
-    case planetDetail(planet: Planet) // all associated values in the NavigationPath enum need conform to Hashable and Equatable
+    /// all associated values in the NavigationPath enum need conform to Hashable and Equatable
+    case planetDetail(planet: Planet)
     
 }

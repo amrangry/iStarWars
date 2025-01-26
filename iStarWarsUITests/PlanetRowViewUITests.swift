@@ -7,7 +7,7 @@
 
 import XCTest
 
-
+/// PlanetRowViewUITests class for UI
 final class PlanetRowViewUITests: XCTestCase {
     
     let app = XCUIApplication()
@@ -44,5 +44,4 @@ final class PlanetRowViewUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["populationLabel"].exists, "Population label should exist")
     }
 
-    
 }

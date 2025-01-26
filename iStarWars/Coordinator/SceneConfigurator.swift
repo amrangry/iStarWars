@@ -31,7 +31,7 @@ class SceneConfigurator {
     func configurePlanetDetailsViewModel(planet: Planet) -> PlanetDetailsViewModel {
         let apiClient = apiClient
         let cacheManager = cacheManager
-        let viewModel = PlanetDetailsConfigurator.configure(client: apiClient, cacheManager: cacheManager, model: planet)
+        let viewModel = PlanetDetailsConfigurator.configure(client: apiClient, cacheManager: cacheManager, model: planet) //swiftlint:disable:this line_length
         return viewModel
     }
     

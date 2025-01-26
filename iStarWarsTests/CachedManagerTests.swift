@@ -11,8 +11,8 @@ import XCTest
 class CachedManagerTests: XCTestCase {
     
     var cacheManager: CacheManager!
-    let testData = "myTestData".data(using: .utf8)!
-    let testURL = URL(string: "https://amrangry.github.io/api/data")!
+    let testData = Data("myTestData".utf8)
+    let testURL = URL(string: "https://amrangry.github.io/api/data")! //swiftlint:disable:this force_unwrapping
     
     override func setUp() {
         super.setUp()

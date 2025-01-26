@@ -7,10 +7,11 @@
 
 import XCTest
 
-final class iStarWarsUITestsLaunchTests: XCTestCase {
+final class iStarWarsUITestsLaunchTests: XCTestCase { // swiftlint:disable:this type_name
 
     let app = XCUIApplication()
-    
+
+    //swiftlint:disable:next static_over_final_class
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
@@ -31,4 +32,5 @@ final class iStarWarsUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+
 }

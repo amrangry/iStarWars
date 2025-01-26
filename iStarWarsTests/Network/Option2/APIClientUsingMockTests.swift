@@ -15,7 +15,7 @@ class APIClientUsingMockTests: XCTestCase {
     
     var mockAPIClient: MockAPIClient!
     var cancellables: Set<AnyCancellable>!
-    let baseURL = URL(string: "https://amrangry.github.io/api/data")!
+    let baseURL = URL(string: "https://amrangry.github.io/api/data")!  //swiftlint:disable:this force_unwrapping
     
     override func setUp() {
         super.setUp()
