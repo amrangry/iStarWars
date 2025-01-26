@@ -82,9 +82,10 @@ custom_rules:
 #        severity: error
     rule_id:
         # included: Source/YourProject/Rules/\w+\.swift # Adjust this path to your project's structure
-        name: Rule ID
+        name: "Rule ID"
         message: Rule IDs must be all lowercase, snake case and not end with `rule`
-        regex: identifier:\s*("\w+_rule"|"\S*[^a-z_]\S*")
+        #regex: identifier:\s*("\w+_rule"|"\S*[^a-z_]\S*")
+        regex: ^\s*identifier:\s*"\w+"$
         severity: error
 
 #identifier_name:
