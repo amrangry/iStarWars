@@ -5,16 +5,20 @@ platform :ios, '15.0'
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 target 'iStarWars' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  
-  target 'iStarWarsTests' do
-    inherit! :search_paths
-  end
-  
-  target 'iStarWarsUITests' do
-    inherit! :search_paths
-  end
-  
-  pod 'SwiftLint', :inhibit_warnings => true
+    
+    # Use dynamic frameworks for all pods
+    use_frameworks!
+    
+    # #CodeSmell
+    # Add SwiftLint pod
+    pod 'SwiftLint', :inhibit_warnings => true
+    
+    target 'iStarWarsTests' do
+        inherit! :search_paths
+    end
+    
+    target 'iStarWarsUITests' do
+        inherit! :search_paths
+    end
+    
 end
