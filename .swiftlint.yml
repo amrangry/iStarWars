@@ -1,3 +1,6 @@
+#########################################################################################
+# SwiftLint configuration file.
+#########################################################################################
 
 #########################################################################################
 #                                                                                       #
@@ -18,15 +21,15 @@
 #   "${PODS_ROOT}/SwiftLint/swiftlint"                                                  #
 #  ```                                                                                  #
 #  or                                                                                   #
-# $SRCROOT/BuildPhasesScripts/SwiftLintRunScript.sh                                     #                                          #
+# $SRCROOT/BuildPhasesScripts/SwiftLintRunScript.sh                                     #
 #########################################################################################
 
 #########################################################################################
 # How to disable swiftlint check in code inline!                                        #
 #                                                                                       #
 #  ```                                                                                  #
-#    //swiftlint:disable:next <rule name>                                               #                                             #
-#  ```                                                                                  #                                        #
+#    //swiftlint:disable:next <rule name>                                               #
+#  ```                                                                                  #
 #########################################################################################
 
 # We don't want to use swiftlint for our external dependencies.
@@ -34,6 +37,10 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
     - Pods
     #- <ProjectDirectoryName>/<folder>
     #- <ProjectDirectoryName>/<folder>/<file>.<ext>
+    
+analyzer_rules:
+  # Rules that require `swiftlint analyze` to run
+  - unused_import
 
 disabled_rules: # rule identifiers to exclude from running
 #  - vertical_whitespace
@@ -43,17 +50,18 @@ disabled_rules: # rule identifiers to exclude from running
 #  - large_tuple
 #  - identifier_name
 #  - control_statement
-    - file_length
-    - trailing_whitespace
-    - comment_spacing
-    - switch_case_alignment
+#  - file_length
+#  - trailing_whitespace
+#  - comment_spacing
+   - switch_case_alignment
 
 opt_in_rules: # some rules are only opt-in
-    - empty_count
-    - missing_docs
     - force_unwrapping
-    - closure_spacing
-    - unused_import
+    - file_name
+#    - empty_count
+#    - missing_docs
+#    - closure_spacing
+#    - unused_import
 
 # Limit line length to '220' characters.
 # We need to specify both to avoid warnings at 120. (Default value) >> 100 for warning, 200 for error
@@ -62,7 +70,8 @@ line_length:
     error: 220
 
 # Force unwrapping should be avoided like the plague.
-force_unwrapping: warning # or keep it as error if you prefer strict enforcement
+# force_unwrapping: warning # or keep it as error if you prefer strict enforcement
+force_unwrapping: error # or keep it as error if you prefer strict enforcement
 
 # Even so they might seem to be not that important we want a clean code base right from the beginning.
 # And even more important for the lazy one's: This will avoid superfluous style discussions and comments in PR's.
@@ -73,13 +82,6 @@ trailing_whitespace:
     ignores_empty_lines: true # or keep it as false if you prefer strict enforcement
 
 custom_rules:
-    # To avoid visual noise we eschew the auto-generated Xcode template documentation.
-#    xcode_template_documentation:
-#        match_kinds:
-#            - comment
-#        message: "No need for the xcode template documentation. Please remove it!"
-#        regex: '^\/{2}\n\/{2}\s{2}[A-z]*.swift\n\/{2}\s*[A-z]*\n\/{2}\n\/{2}\s{2}Created'
-#        severity: error
     rule_id:
         # included: Source/YourProject/Rules/\w+\.swift # Adjust this path to your project's structure
         name: "Rule ID"
@@ -87,25 +89,18 @@ custom_rules:
         #regex: identifier:\s*("\w+_rule"|"\S*[^a-z_]\S*")
         regex: ^\s*identifier:\s*"\w+"$
         severity: error
+#    # To avoid visual noise we eschew the auto-generated Xcode template documentation.
+#    xcode_template_documentation:
+#        match_kinds:
+#            - comment
+#        message: "No need for the xcode template documentation. Please remove it!"
+#        regex: '^\/{2}\n\/{2}\s{2}[A-z]*.swift\n\/{2}\s*[A-z]*\n\/{2}\n\/{2}\s{2}Created'
+#        severity: error
 
-#identifier_name:
-#    min_length: 2 # only warning
-#    max_length: 30 # warning and error
-#    warning: 20
-#    error: 30
-#    excluded: # excluded via string array
-#    - id
-#    - URL
-#    - GlobalAPIKey
-#    - by
-#    - vc
-#    - en
-#    - ar
-#    - to
-#    - ad
-    
 identifier_name:
-  excluded: # excluded via string array
+    min_length: 2 # only warning
+    max_length: 30 # warning and error
+    excluded: # excluded via string array
     - id
     - URL
     - GlobalAPIKey
@@ -115,7 +110,7 @@ identifier_name:
     - ar
     - to
     - ad
-    
+        
 type_name:
   min_length: 2 # only warning
   max_length: 30 # warning and error
