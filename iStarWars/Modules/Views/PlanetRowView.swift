@@ -16,15 +16,19 @@ struct PlanetRowView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(planet.name ?? "")
                 .font(.headline)
+                .accessibilityIdentifier("planetNameLabel") // Add identifier
             Text("Climate: \( planet.climate ?? "")")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
+                .accessibilityIdentifier("climateLabel") // Add identifier
             Text("Terrain: \(planet.terrain ?? "")")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
+                .accessibilityIdentifier("terrainLabel") // Add identifier
             Text("Population: \(planet.population  ?? "")")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
+                .accessibilityIdentifier("populationLabel") // Add identifier
         }
         .padding(.vertical, 8)
     }
