@@ -10,23 +10,23 @@ import SwiftUI
 
 /// AppCoordinator manage app naviagtion
 class AppCoordinator: ObservableObject {
-    
+
     @Published var navigationPath = [NavigationPath]()
-    
+
     private let sceneConfigurator = SceneConfigurator.shared
 
     func navigate(to path: NavigationPath) {
         navigationPath.append(path)
     }
-    
+
     func pop() {
         navigationPath.removeLast()
     }
-    
+
     func popToRoot() {
         navigationPath.removeAll()
     }
-    
+
     @ViewBuilder
     func view(for path: NavigationPath) -> some View {
         let sceneConfigurator = self.sceneConfigurator

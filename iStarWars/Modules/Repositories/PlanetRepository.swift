@@ -13,8 +13,7 @@ class PlanetRepository: PlanetRepositoryProtocol {
     
     private let apiClient: DataClientProtocol
     private let cacheManager: CacheManagerProtocol
-    
-    
+
     init(apiClient: DataClientProtocol = APIClient.shared, cacheManager: CacheManagerProtocol = CacheManager.shared) {
         self.apiClient = apiClient
         self.cacheManager = cacheManager
@@ -39,7 +38,7 @@ class PlanetRepository: PlanetRepositoryProtocol {
                 // Assign identifiers based on the array index
                 let planets = response.results.enumerated().map { index, planet in
                     var planetWithIdentifier = planet
-                    planetWithIdentifier.identifier = "\(index + 1)" // Start from 1
+                    planetWithIdentifier.index = "\(index + 1)" // Start from 1
                     return planetWithIdentifier
                 }
                 

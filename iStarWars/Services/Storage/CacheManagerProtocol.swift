@@ -7,7 +7,8 @@
 
 import Foundation
 
-/// `CacheManagerProtocol` defines the requirements that a cache manager must conform to in order to handle caching operations.
+/// `CacheManagerProtocol` defines the requirements that a cache manager must conform
+///  to in order to handle caching operations.
 protocol CacheManagerProtocol {
     
     func data(for url: URL) -> Data?

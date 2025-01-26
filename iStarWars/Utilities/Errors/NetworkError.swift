@@ -10,9 +10,9 @@ import Foundation
 /// NetworkError is an enum that conforms to the Error and LocalizedError protocols.
 enum NetworkError: Error, LocalizedError {
     
-    //Represents network-related errors.
+    // Represents network-related errors.
     case networkError(description: String)
-    //Represents an invalid URL error.
+    // Represents an invalid URL error.
     case invalidURL
     case noInternetConnection
     case timeout

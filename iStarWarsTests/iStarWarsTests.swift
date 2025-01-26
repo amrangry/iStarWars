@@ -7,6 +7,7 @@
 
 import Testing
 
+/// iStarWarsTests for testing app
 struct iStarWarsTests {
 
     @Test func example() async throws {

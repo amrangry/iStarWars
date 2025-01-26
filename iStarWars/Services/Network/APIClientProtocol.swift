@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import Combine
 
 /// `APIClientProtocol` defines the requirements that a APIClient must conform to in order to handle network operations.
@@ -18,4 +16,5 @@ protocol APIClientProtocol {
     // Async/Await
     func request<T: Decodable>(_ url: URL) async throws -> T
     func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T
+    
 }

@@ -26,7 +26,7 @@ class PlanetDetailsViewModel: ObservableObject {
     
     // MARK: - Methods
     func fetchPlanetDetails() {
-        guard let id = planet?.identifier else { return }
+        guard let id = planet?.index else { return }
         
         isLoading = true
         errorMessage = nil

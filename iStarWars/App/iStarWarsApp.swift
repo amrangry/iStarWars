@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct iStarWarsApp: App {
-    
+struct iStarWarsApp: App { // swiftlint:disable:this type_name
+
     @StateObject private var coordinator = AppCoordinator()
-    
+
     init() {
         // Configure CacheManager
         let cacheExpiryInterval = Constants.cacheExpiryInterval
@@ -23,7 +23,7 @@ struct iStarWarsApp: App {
                                cacheSizeDisk: cacheSizeDisk,
                                cacheDiskPath: cacheDiskPath)
     }
-    
+
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $coordinator.navigationPath) {
@@ -32,5 +32,5 @@ struct iStarWarsApp: App {
             }
         }
     }
-    
+
 }

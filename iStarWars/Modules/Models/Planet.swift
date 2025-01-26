@@ -7,12 +7,12 @@
 
 import Foundation
 
-/// MARK: - Planet
+/// Planet struct
 struct Planet: Codable, Identifiable {
     /// Unique identifier for SwiftUI
     let id = UUID()
     /// Custom identifier based on the array index
-    var identifier: String?
+    var index: String?
     let name, rotationPeriod, orbitalPeriod, diameter: String?
     let climate, gravity, terrain, surfaceWater: String?
     let population: String?
@@ -21,7 +21,7 @@ struct Planet: Codable, Identifiable {
     let url: String?
     
     enum CodingKeys: String, CodingKey {
-        case identifier
+        case index
         case name
         case rotationPeriod = "rotation_period"
         case orbitalPeriod = "orbital_period"

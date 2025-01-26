@@ -39,7 +39,11 @@
 		11B3AC402D43D9BF009CCAE0 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		11B3AC412D43D9BF009CCAE0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		11B3AC422D43D9BF009CCAE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		11E4C9382D44D4C700055DAE /* notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = notes.md; sourceTree = "<group>"; };
+		11E4CA612D46919200055DAE /* open_terminal.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = open_terminal.sh; sourceTree = "<group>"; };
+		11E4CA622D46919200055DAE /* RemoveATSExceptions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoveATSExceptions.sh; sourceTree = "<group>"; };
+		11E4CA632D46919200055DAE /* SetBuildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SetBuildNumber.sh; sourceTree = "<group>"; };
+		11E4CA642D46919200055DAE /* SwiftLintRunScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SwiftLintRunScript.sh; sourceTree = "<group>"; };
+		11E4CA652D46919200055DAE /* unused.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused.rb; sourceTree = "<group>"; };
 		11FFF9E02D4223F100CDFCD6 /* iStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9F12D4223F300CDFCD6 /* iStarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9FB2D4223F300CDFCD6 /* iStarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11E4CA662D46919200055DAE /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				11E4CA612D46919200055DAE /* open_terminal.sh */,
+				11E4CA622D46919200055DAE /* RemoveATSExceptions.sh */,
+				11E4CA632D46919200055DAE /* SetBuildNumber.sh */,
+				11E4CA642D46919200055DAE /* SwiftLintRunScript.sh */,
+				11E4CA652D46919200055DAE /* unused.rb */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		11FFF9D72D4223F100CDFCD6 = {
 			isa = PBXGroup;
 			children = (
+				11E4CA662D46919200055DAE /* scripts */,
 				11FFF9E22D4223F100CDFCD6 /* iStarWars */,
 				11FFF9F42D4223F300CDFCD6 /* iStarWarsTests */,
 				11FFF9FE2D4223F300CDFCD6 /* iStarWarsUITests */,
@@ -112,7 +129,6 @@
 				11B3AC3F2D43D9BF009CCAE0 /* LICENSE */,
 				11B3AC402D43D9BF009CCAE0 /* Makefile */,
 				11B3AC412D43D9BF009CCAE0 /* Podfile */,
-				11E4C9382D44D4C700055DAE /* notes.md */,
 				11B3AC422D43D9BF009CCAE0 /* README.md */,
 				CA4948A780323B0AE999B927 /* Pods */,
 				5E2A4E74E566A6BFF4DB0BC6 /* Frameworks */,
@@ -159,11 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11FFFA052D4223F300CDFCD6 /* Build configuration list for PBXNativeTarget "iStarWars" */;
 			buildPhases = (
+				16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */,
 				11FFFAF62D42D17400CDFCD6 /* SwifLint */,
 				11FFF9DC2D4223F100CDFCD6 /* Sources */,
 				11FFF9DD2D4223F100CDFCD6 /* Frameworks */,
 				11FFF9DE2D4223F100CDFCD6 /* Resources */,
-				16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */,
 			);
 			buildRules = (
 			);
@@ -299,15 +315,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"if which swiftlint >/dev/null; then\n    swiftlint\n    touch \"$TEMP_DIR/swiftlint_$CONFIGURATION\"\nelse\n    echo \"SwiftLint not installed. Download from https://github.com/realm/SwiftLint\"\nfi\n",
 			);
 			name = SwifLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$TEMP_DIR/swiftlint_$CONFIGURATION\n",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/BuildPhasesScripts/SwiftLintRunScript.sh\n\n";
+			shellScript = "$SRCROOT/scripts/SwiftLintRunScript.sh\n\n";
 		};
 		16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -452,7 +470,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -513,7 +531,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

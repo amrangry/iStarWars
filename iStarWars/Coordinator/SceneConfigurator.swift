@@ -19,7 +19,7 @@ class SceneConfigurator {
         self.cacheManager = CacheManager.shared
     }
     
-    //PlanetListView Dependencies
+    // PlanetListView Dependencies
     func configurePlanetViewModel() -> PlanetsViewModel {
         let apiClient = apiClient
         let cacheManager = cacheManager
@@ -27,11 +27,11 @@ class SceneConfigurator {
         return viewModel
     }
     
-    //PlanetDetailView Dependencies
+    // PlanetDetailView Dependencies
     func configurePlanetDetailsViewModel(planet: Planet) -> PlanetDetailsViewModel {
         let apiClient = apiClient
         let cacheManager = cacheManager
-        let viewModel = PlanetDetailsConfigurator.configure(client: apiClient, cacheManager: cacheManager, model: planet)
+        let viewModel = PlanetDetailsConfigurator.configure(client: apiClient, cacheManager: cacheManager, model: planet) // swiftlint:disable:this line_length
         return viewModel
     }
     

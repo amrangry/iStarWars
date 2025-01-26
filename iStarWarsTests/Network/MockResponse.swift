@@ -14,12 +14,12 @@ struct MockResponse: Decodable {
     let name: String
     
     static func getMockedData() -> Data {
-        let data = """
+        let data = Data("""
         {
             "id": 1,
             "name": "Test"
         }
-        """.data(using: .utf8)!
+        """.utf8)
         return data
     }
     

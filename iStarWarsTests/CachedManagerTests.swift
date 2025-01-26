@@ -11,8 +11,8 @@ import XCTest
 class CachedManagerTests: XCTestCase {
     
     var cacheManager: CacheManager!
-    let testData = "myTestData".data(using: .utf8)!
-    let testURL = URL(string: "https://amrangry.github.io/api/data")!
+    let testData = Data("myTestData".utf8)
+    let testURL = URL(string: "https://amrangry.github.io/api/data")! // swiftlint:disable:this force_unwrapping
     
     override func setUp() {
         super.setUp()
@@ -28,17 +28,17 @@ class CachedManagerTests: XCTestCase {
     }
     
     func testRetunCashedDataIfExistAndNotExpired() {
-        //Given
+        // Given
         cacheManager.cache(testData, for: testURL)
-        //When
+        // When
         let dataFromCache = cacheManager.data(for: testURL)
-        //Then
+        // Then
         XCTAssertNotNil(dataFromCache, "Data not found in cache")
         XCTAssertEqual(dataFromCache, testData, "Data in cache is not equal")
     }
     
     func testRetunCashedDataIfExpired() {
-        //Given
+        // Given
         cacheManager.cache(testData, for: testURL)
         // Simulate cache expiry by setting the timestamp to an old date
         let cache = cacheManager.getCache()
@@ -50,18 +50,18 @@ class CachedManagerTests: XCTestCase {
             )
             cache?.storeCachedResponse(expiredResponse, for: URLRequest(url: testURL))
         }
-        //When
+        // When
         let dataFromCache = cacheManager.data(for: testURL)
-        //Then
+        // Then
         XCTAssertNil(dataFromCache, "Data found in cache even though it is expired")
         XCTAssertNotNil(dataFromCache, "Data found in cache even though it is expired")
         XCTAssertEqual(dataFromCache, testData, "Data in cache is not equal")
     }
     
     func testRetunCashedDataWhenNotExist() {
-        //Given
-        //When
-        //Then
+        // Given
+        // When
+        // Then
     }
     
 }

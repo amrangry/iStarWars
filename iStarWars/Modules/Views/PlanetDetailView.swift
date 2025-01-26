@@ -11,7 +11,7 @@ import SwiftUI
 struct PlanetDetailView: View {
     
     let planet: Planet
-    //@StateObject private var viewModel = PlanetDetailsViewModel()
+    // @StateObject private var viewModel = PlanetDetailsViewModel()
     @ObservedObject var viewModel: PlanetDetailsViewModel
     
     var body: some View {

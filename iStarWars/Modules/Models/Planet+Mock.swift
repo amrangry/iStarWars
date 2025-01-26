@@ -14,7 +14,7 @@ extension Planet {
     /// - Returns: `Planet`
     static func mock() -> Planet {
         let mockPlanet = Planet(
-            identifier: "1", // Unique identifier for the planet
+            index: "1", // Unique identifier for the planet
             name: "Tatooine", // Name of the planet
             rotationPeriod: "23", // Rotation period in hours
             orbitalPeriod: "304", // Orbital period in days

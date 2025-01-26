@@ -11,7 +11,8 @@ import XCTest
 class CacheManagerTests: XCTestCase {
     
     var cacheManager: CacheManagerProtocol!
-    let baseURL = URL(string: "https://amrangry.github.io/api/data")!
+    let testData = Data("Test Data".utf8)
+    let baseURL = URL(string: "https://amrangry.github.io/api/data")! // swiftlint:disable:this force_unwrapping
     
     override func setUp() {
         super.setUp()
@@ -27,7 +28,6 @@ class CacheManagerTests: XCTestCase {
     func testCacheData() {
         // Arrange
         let testURL = baseURL
-        let testData = "Test Data".data(using: .utf8)!
         
         // Act
         cacheManager.cache(testData, for: testURL)
@@ -41,7 +41,6 @@ class CacheManagerTests: XCTestCase {
     func testCacheExpiry() {
         // Arrange
         let testURL = baseURL
-        let testData = "Test Data".data(using: .utf8)!
         let expiryInterval: TimeInterval = 5
         
         cacheManager.setCacheExpiryInterval(expiryInterval)
@@ -60,7 +59,6 @@ class CacheManagerTests: XCTestCase {
     func testRemoveCachedData() {
         // Arrange
         let testURL = baseURL
-        let testData = "Test Data".data(using: .utf8)!
         cacheManager.cache(testData, for: testURL)
         
         // Act
@@ -73,10 +71,10 @@ class CacheManagerTests: XCTestCase {
     
     func testClearCache() {
         // Arrange
-        let testURL1 = URL(string: "https://example.com/resource1")!
-        let testURL2 = URL(string: "https://example.com/resource2")!
-        let testData1 = "Test Data 1".data(using: .utf8)!
-        let testData2 = "Test Data 2".data(using: .utf8)!
+        let testURL1 = URL(string: "https://example.com/resource1")! // swiftlint:disable:this force_unwrapping
+        let testURL2 = URL(string: "https://example.com/resource2")! // swiftlint:disable:this force_unwrapping
+        let testData1 = Data("Test Data 1".utf8)
+        let testData2 = Data("Test Data 2".utf8)
         
         cacheManager.cache(testData1, for: testURL1)
         cacheManager.cache(testData2, for: testURL2)

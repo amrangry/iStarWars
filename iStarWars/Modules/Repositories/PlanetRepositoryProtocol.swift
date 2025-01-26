@@ -7,7 +7,8 @@
 
 import Combine
 
-/// `PlanetRepositoryProtocol` defines the requirements that a PlanetRepository must conform to in order to handle  operations.
+/// `PlanetRepositoryProtocol` defines the requirements that a PlanetRepository must conform
+/// to in order to handle  operations.
 protocol PlanetRepositoryProtocol {
     
     /// Combine
@@ -17,4 +18,3 @@ protocol PlanetRepositoryProtocol {
     func fetchPlanetDetails(id: String) async throws -> Planet
     
 }
-

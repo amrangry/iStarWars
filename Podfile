@@ -11,7 +11,7 @@ target 'iStarWars' do
     
     # #CodeSmell
     # Add SwiftLint pod
-    pod 'SwiftLint', :inhibit_warnings => true
+    pod 'SwiftLint', :inhibit_warnings => true # 0.58.1
     
     target 'iStarWarsTests' do
         inherit! :search_paths
