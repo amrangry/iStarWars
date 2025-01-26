@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 /// `APIClient`  conform `APIClientProtocol`  that handle all network requests. It abstracts the networking logic (e.g., URLSession).
+class APIClient: APIClientProtocol {
     
     static let shared = APIClient()
     var urlSession: URLSession = URLSession.shared
