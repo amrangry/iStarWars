@@ -7,7 +7,7 @@
 
 import Foundation
 
-// extension String funcationality 
+/// String extension  funcationality 
 extension String {
     
     var localized: String {

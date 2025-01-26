@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// AppCoordinator manage app naviagtion
 class AppCoordinator: ObservableObject {
     
     @Published var navigationPath = [NavigationPath]()

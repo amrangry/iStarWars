@@ -7,9 +7,7 @@
 
 import Foundation
 
-/**
- The SceneConfigurator handles dependency injection, keeping the view code clean and focused on UI.
- */
+/// The SceneConfigurator handles dependency injection, keeping the view code clean and focused on UI.
 class SceneConfigurator {
     
     static let shared = SceneConfigurator()

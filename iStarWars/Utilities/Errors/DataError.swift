@@ -7,7 +7,7 @@
 
 import Foundation
 
-//DataError is an enum that conforms to the Error and LocalizedError protocols.
+/// DataError is an enum that conforms to the Error and LocalizedError protocols.
 enum DataError: Error, LocalizedError {
     
     //Represents errors that occur during JSON decoding.

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Application Environment
 enum Environment {
     
     case development

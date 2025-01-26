@@ -7,8 +7,9 @@
 
 import Foundation
 
-//API Endpoints 
+/// API Endpoints 
 enum Endpoints {
+    
     case planets
     case planetDetails(String)
     

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-//The PlanetRepository mediates between the APIClient and the UseCase. It abstracts the data source (e.g., API).
+/// The PlanetRepository mediates between the APIClient and the UseCase. It abstracts the data source (e.g., API).
 class PlanetRepository: PlanetRepositoryProtocol {
     
     private let apiClient: APIClient

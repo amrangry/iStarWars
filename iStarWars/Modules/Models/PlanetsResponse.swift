@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// PlanetsResponse Entity 
 struct PlanetsResponse: Codable {
     let results: [Planet]
     let count: Int

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Planet
+/// MARK: - Planet
 struct Planet: Codable, Identifiable {
     /// Unique identifier for SwiftUI
     let id = UUID()

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Planets extension
 extension Planet {
     /**
      The mockPlanet object provides sample data for the preview.

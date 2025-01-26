@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// PlanetListView display the list 
 struct PlanetListView: View {
 
     @StateObject var viewModel: PlanetsViewModel

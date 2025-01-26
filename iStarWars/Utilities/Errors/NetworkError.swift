@@ -7,7 +7,7 @@
 
 import Foundation
 
-//NetworkError is an enum that conforms to the Error and LocalizedError protocols.
+/// NetworkError is an enum that conforms to the Error and LocalizedError protocols.
 enum NetworkError: Error, LocalizedError {
     
     //Represents network-related errors.

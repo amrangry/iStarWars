@@ -7,6 +7,7 @@
 
 import Combine
 
+/// PlanetDetailsViewModel Model
 class PlanetDetailsViewModel: ObservableObject {
     
     // MARK: - Published Properties

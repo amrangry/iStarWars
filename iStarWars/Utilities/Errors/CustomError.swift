@@ -7,7 +7,7 @@
 
 import Foundation
 
-//CustomError is an enum that conforms to the Error and LocalizedError protocols.
+/// CustomError is an enum that conforms to the Error and LocalizedError protocols.
 enum CustomError: Error, LocalizedError {
     
     case error(description: String)

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// NavigationPath define the app path
 enum NavigationPath: Hashable, Equatable {
     
     case planetList

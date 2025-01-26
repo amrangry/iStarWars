@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Application Constants
+/// Application Constants
 struct Constants {
     
     // Configuration Network
