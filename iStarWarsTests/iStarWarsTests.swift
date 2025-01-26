@@ -8,7 +8,7 @@
 import Testing
 
 /// iStarWarsTests for testing app
-struct iStarWarsTests { // swiftlint:disable:this type_name
+struct iStarWarsTests {
 
     @Test func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.

@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class iStarWarsUITests: XCTestCase { // swiftlint:disable:this type_name
+final class iStarWarsUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
