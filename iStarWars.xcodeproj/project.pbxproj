@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		11E4C9AD2D454D0D00055DAE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		11FFF9F22D4223F300CDFCD6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -30,14 +26,14 @@
 /* Begin PBXFileReference section */
 		11B3AC3C2D43D9BF009CCAE0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		11B3AC3E2D43D9BF009CCAE0 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		11B3AC3F2D43D9BF009CCAE0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		11B3AC422D43D9BF009CCAE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		11E4CA612D46919200055DAE /* open_terminal.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = open_terminal.sh; sourceTree = "<group>"; };
 		11E4CA622D46919200055DAE /* RemoveATSExceptions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoveATSExceptions.sh; sourceTree = "<group>"; };
 		11E4CA632D46919200055DAE /* SetBuildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SetBuildNumber.sh; sourceTree = "<group>"; };
-		11E4CA642D46919200055DAE /* SwiftLintRunScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SwiftLintRunScript.sh; sourceTree = "<group>"; };
+		11E4CA642D46919200055DAE /* 1_update_sandboxing.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = 1_update_sandboxing.sh; sourceTree = "<group>"; };
 		11E4CA652D46919200055DAE /* unused.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused.rb; sourceTree = "<group>"; };
+		11E4CDCA2D46EBE900055DAE /* 2_swiftlint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = 2_swiftlint.sh; sourceTree = "<group>"; };
 		11FFF9E02D4223F100CDFCD6 /* iStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9F12D4223F300CDFCD6 /* iStarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9FB2D4223F300CDFCD6 /* iStarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +88,8 @@
 				11E4CA612D46919200055DAE /* open_terminal.sh */,
 				11E4CA622D46919200055DAE /* RemoveATSExceptions.sh */,
 				11E4CA632D46919200055DAE /* SetBuildNumber.sh */,
-				11E4CA642D46919200055DAE /* SwiftLintRunScript.sh */,
+				11E4CA642D46919200055DAE /* 1_update_sandboxing.sh */,
+				11E4CDCA2D46EBE900055DAE /* 2_swiftlint.sh */,
 				11E4CA652D46919200055DAE /* unused.rb */,
 			);
 			path = scripts;
@@ -108,7 +105,6 @@
 				11FFF9E12D4223F100CDFCD6 /* Products */,
 				11B3AC3C2D43D9BF009CCAE0 /* .gitignore */,
 				11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */,
-				11B3AC3E2D43D9BF009CCAE0 /* Gemfile */,
 				11B3AC3F2D43D9BF009CCAE0 /* LICENSE */,
 				11B3AC422D43D9BF009CCAE0 /* README.md */,
 			);
@@ -131,8 +127,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11FFFA052D4223F300CDFCD6 /* Build configuration list for PBXNativeTarget "iStarWars" */;
 			buildPhases = (
-				16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */,
-				11FFFAF62D42D17400CDFCD6 /* SwifLint */,
+				11FFFAF62D42D17400CDFCD6 /* SwiftLint */,
 				11FFF9DC2D4223F100CDFCD6 /* Sources */,
 				11FFF9DD2D4223F100CDFCD6 /* Frameworks */,
 				11FFF9DE2D4223F100CDFCD6 /* Resources */,
@@ -225,6 +220,9 @@
 			);
 			mainGroup = 11FFF9D72D4223F100CDFCD6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				11E4CC192D46D97900055DAE /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 11FFF9E12D4223F100CDFCD6 /* Products */;
 			projectDirPath = "";
@@ -242,7 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11E4C9AD2D454D0D00055DAE /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +260,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11FFFAF62D42D17400CDFCD6 /* SwifLint */ = {
+		11FFFAF62D42D17400CDFCD6 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,7 +270,7 @@
 			inputPaths = (
 				"if which swiftlint >/dev/null; then\n    swiftlint\n    touch \"$TEMP_DIR/swiftlint_$CONFIGURATION\"\nelse\n    echo \"SwiftLint not installed. Download from https://github.com/realm/SwiftLint\"\nfi\n",
 			);
-			name = SwifLint;
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -281,29 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/scripts/SwiftLintRunScript.sh\n\n";
-		};
-		16BB45873380C660271B8923 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iStarWars-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "#$SRCROOT/scripts/2_swiftlint.sh\n\n# Find SwiftLint's SPM binary path\nSWIFTLINT_PATH=\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/SwiftLint/swiftlint\"\n\nif [ -f \"$SWIFTLINT_PATH\" ]; then\n  \"$SWIFTLINT_PATH\"\nelse\n  echo \"warning: SwiftLint binary not found. Ensure SwiftLint is added via SPM.\"\nfi\n\n";
 		};
 		AC738389E556C33712F1F4F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -441,6 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -496,6 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -513,6 +490,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -551,6 +530,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -705,6 +686,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11E4CC192D46D97900055DAE /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.58.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 11FFF9D82D4223F100CDFCD6 /* Project object */;
 }
