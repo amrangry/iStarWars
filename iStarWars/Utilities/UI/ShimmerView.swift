@@ -10,7 +10,7 @@ import SwiftUI
 /// ShimmerView istemp view whiel loading
 struct ShimmerView: View {
     
-    @State private var isAnimating = false
+    @State var isAnimating = false
     
     var body: some View {
         Rectangle()
@@ -24,6 +24,7 @@ struct ShimmerView: View {
             .onAppear {
                 isAnimating = true
             }
+            .accessibility(label: Text("Loading Data...".localized)) // Use `accessibility(label:)` here
     }
     
 }
