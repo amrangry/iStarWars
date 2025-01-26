@@ -11,8 +11,8 @@ import Foundation
 class SceneConfigurator {
     
     static let shared = SceneConfigurator()
-    let apiClient: APIClient
-    let cacheManager: CacheManager
+    let apiClient: DataClientProtocol
+    let cacheManager: CacheManagerProtocol
     
     private init() {
         self.apiClient = APIClient.shared
@@ -23,20 +23,16 @@ class SceneConfigurator {
     func configurePlanetViewModel() -> PlanetsViewModel {
         let apiClient = apiClient
         let cacheManager = cacheManager
-        let planetRepository = PlanetRepository(apiClient: apiClient, cacheManager: cacheManager)
-        let fetchPlanetsUseCase = FetchPlanetsUseCase(repository: planetRepository)
-        let planetViewModel = PlanetsViewModel(fetchPlanetsUseCase: fetchPlanetsUseCase)
-        return planetViewModel
+        let viewModel = PlanetsConfigurator.configure(client: apiClient, cacheManager: cacheManager)
+        return viewModel
     }
     
     //PlanetDetailView Dependencies
     func configurePlanetDetailsViewModel(planet: Planet) -> PlanetDetailsViewModel {
         let apiClient = apiClient
         let cacheManager = cacheManager
-        let planetRepository = PlanetRepository(apiClient: apiClient, cacheManager: cacheManager)
-        let fetchPlanetDetailsUseCase = FetchPlanetDetailsUseCase(repository: planetRepository)
-        let planetDetailViewModel = PlanetDetailsViewModel(useCase: fetchPlanetDetailsUseCase, planet: planet)
-        return planetDetailViewModel
+        let viewModel = PlanetDetailsConfigurator.configure(client: apiClient, cacheManager: cacheManager, model: planet)
+        return viewModel
     }
     
 }

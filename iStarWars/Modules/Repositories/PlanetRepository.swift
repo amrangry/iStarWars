@@ -11,16 +11,16 @@ import Combine
 /// The PlanetRepository mediates between the APIClient and the UseCase. It abstracts the data source (e.g., API).
 class PlanetRepository: PlanetRepositoryProtocol {
     
-    private let apiClient: APIClient
-    private let cacheManager: CacheManager
+    private let apiClient: DataClientProtocol
+    private let cacheManager: CacheManagerProtocol
     
     
-    init(apiClient: APIClient = APIClient.shared, cacheManager: CacheManager = CacheManager.shared) {
+    init(apiClient: DataClientProtocol = APIClient.shared, cacheManager: CacheManagerProtocol = CacheManager.shared) {
         self.apiClient = apiClient
         self.cacheManager = cacheManager
     }
     
-    // Combine
+    /// Combine
     func fetchPlanets() -> AnyPublisher<[Planet], Error> {
         guard let url = Endpoints.planets.url else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
@@ -62,7 +62,7 @@ class PlanetRepository: PlanetRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
-    // Async/Await
+    /// Async/Await
     func fetchPlanetDetails(id: String) async throws -> Planet {
         guard let url = Endpoints.planetDetails(id).url else {
             throw URLError(.badURL)
