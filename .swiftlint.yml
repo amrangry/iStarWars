@@ -32,14 +32,25 @@
 #  ```                                                                                  #
 #########################################################################################
 
+#Specifies the version of SwiftLint being used (0.57.0). This ensures consistency across different environments.
+#swiftlint_version: 0.57.0 
+
+# Inherits rules from a remote SwiftLint configuration file. This is useful for maintaining a centralized set of rules across multiple projects.
+parent_config: https://raw.githubusercontent.com/realm/SwiftLint/master/.swiftlint.yml
+# point to specific git comment
+# parent_config: https://raw.githubusercontent.com/Automattic/swiftlint-config/b497131f8d0fddbf3b23278cfc4ef8d86c9bcb20/.swiftlint.yml
+# Sets a timeout (in seconds) for fetching the remote configuration file.
+remote_timeout: 10.0
+
+
 # We don't want to use swiftlint for our external dependencies.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
     - Pods
+    .build
     #- <ProjectDirectoryName>/<folder>
     #- <ProjectDirectoryName>/<folder>/<file>.<ext>
     
-analyzer_rules:
-  # Rules that require `swiftlint analyze` to run
+analyzer_rules: # specifies rules that need to be run with the swiftlint analyze
   - unused_import
 
 disabled_rules: # rule identifiers to exclude from running
@@ -55,7 +66,7 @@ disabled_rules: # rule identifiers to exclude from running
 #  - comment_spacing
    - switch_case_alignment
 
-opt_in_rules: # some rules are only opt-in
+opt_in_rules: # these are rules that are not enabled by default
     - force_unwrapping
     - file_name
 #    - empty_count
