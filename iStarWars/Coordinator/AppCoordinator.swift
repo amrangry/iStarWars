@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-/// AppCoordinator manage app naviagtion
+/// The `AppCoordinator` manage app naviagtion
 class AppCoordinator: ObservableObject {
 
     @Published var navigationPath = [NavigationPath]()
@@ -38,4 +38,5 @@ class AppCoordinator: ObservableObject {
                 PlanetDetailView(planet: planet, viewModel: planetDetailViewModel)
         }
     }
+    
 }
