@@ -37,7 +37,7 @@ struct PlanetListView: View {
             }
             .navigationTitle("Planets")
             .onAppear {
-                // Fetch planets when the view appears
+                // Fetch planets when the view appears nd planet is empty
                 if viewModel.planets.isEmpty {
                     viewModel.fetchPlanets()
                 }
