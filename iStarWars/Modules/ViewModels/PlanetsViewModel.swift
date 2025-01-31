@@ -19,7 +19,6 @@ class PlanetsViewModel: ObservableObject {
     
     // MARK: - Dependencies
     
-    // private let repository: PlanetRepositoryProtocol
     private let fetchPlanetsUseCase: FetchPlanetsUseCase
     private var cancellables = Set<AnyCancellable>()
     
