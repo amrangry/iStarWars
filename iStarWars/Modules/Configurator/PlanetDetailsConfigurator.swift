@@ -13,7 +13,7 @@ class PlanetDetailsConfigurator: ObservableObject {
     static func configure(client: DataClientProtocol, cacheManager: CacheManagerProtocol, model: Planet) -> PlanetDetailsViewModel { // swiftlint:disable:this line_length
         let apiClient = client
         let cacheManager = cacheManager
-        let repository = PlanetRepository(apiClient: apiClient, cacheManager: cacheManager)
+        let repository = PlanetRepositoryAPI(apiClient: apiClient, cacheManager: cacheManager)
         let useCase = FetchPlanetDetailsUseCase(repository: repository)
         let viewModel = PlanetDetailsViewModel(useCase: useCase, planet: model)
         return viewModel

@@ -1,5 +1,5 @@
 //
-//  PlanetRepository.swift
+//  PlanetRepositoryAPI.swift
 //  iStarWars
 //
 //  Created by Amr Ahmed Elghadban on 23/01/2025.
@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-/// The PlanetRepository mediates between the APIClient and the UseCase. It abstracts the data source (e.g., API).
-class PlanetRepository: PlanetRepositoryProtocol {
+/// The `PlanetRepositoryAPI` mediates between the `APIClient` and the `UseCase`, It abstracts the data source (e.g., API).
+class PlanetRepositoryAPI: PlanetRepositoryProtocol {
     
     private let apiClient: DataClientProtocol
     private let cacheManager: CacheManagerProtocol
@@ -75,7 +75,8 @@ class PlanetRepository: PlanetRepositoryProtocol {
         
         // Fetch from the network
         do {
-            let planet: Planet = try await apiClient.request(url)
+            var planet: Planet = try await apiClient.request(url)
+            planet.index = id
             // Cache the response
             if let data = try? JSONEncoder().encode(planet) {
                 cacheManager.cache(data, for: url)
