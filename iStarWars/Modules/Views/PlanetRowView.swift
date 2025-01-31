@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// The PlanetRowView is a reusable component that represents a single row in the list of planets
+/// The `PlanetRowView` is a reusable component that represents a single row in the list of planets
 struct PlanetRowView: View {
  
     let planet: Planet
