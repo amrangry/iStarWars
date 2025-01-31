@@ -19,7 +19,7 @@ class PlanetDetailsViewModel: ObservableObject {
     private let useCase: FetchPlanetDetailsUseCase
     
     // MARK: - Initializer
-    init(useCase: FetchPlanetDetailsUseCase = FetchPlanetDetailsUseCase(), planet: Planet? = nil) {
+    init(useCase: FetchPlanetDetailsUseCase, planet: Planet? = nil) {
         self.useCase = useCase
         self.planet = planet
     }

@@ -24,7 +24,7 @@ class PlanetsViewModel: ObservableObject {
     
     // MARK: - Initializer
     
-    init(fetchPlanetsUseCase: FetchPlanetsUseCase = FetchPlanetsUseCase()) {
+    init(fetchPlanetsUseCase: FetchPlanetsUseCase) {
         self.fetchPlanetsUseCase = fetchPlanetsUseCase
     }
     

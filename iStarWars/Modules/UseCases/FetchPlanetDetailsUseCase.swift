@@ -13,7 +13,7 @@ class FetchPlanetDetailsUseCase {
     
     private let repository: PlanetRepositoryProtocol
     
-    init(repository: PlanetRepositoryProtocol = PlanetRepository()) {
+    init(repository: PlanetRepositoryProtocol) {
         self.repository = repository
     }
     
