@@ -1,6 +1,17 @@
-# iStarWars  
+
 <p align="center">
-  <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true"/>
+  <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true" width="400" max-width="90%" alt="iStarWars" />
+</p>
+<p align="center">
+  <strong align="center">iStarWars</strong>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Swift-5.5-orange.svg" />
+    <a href="https://swift.org/package-manager">
+        <img src="https://img.shields.io/badge/swiftpm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
+    </a>
+     <img src="https://img.shields.io/badge/platforms-mac+iPhone+iPad-brightgreen.svg?style=flat" alt="Mac + iPhone+ iPad" />
 </p>
 
 * **[Overview](#overview)**
@@ -222,11 +233,13 @@ Here are some ideas for future improvements:
 
   **Amr Ahmed Elghadban (AmrAngry)**
 
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?logo=gmail)](mailto:amr.elghadban@gmail.com) [![WhatsApp](https://img.shields.io/badge/GitHub-Profile-blue?logo=whatsapp)](https://api.whatsapp.com/send/?phone=00971543233227&text=Hi%20&app_absent=0) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/amrelghadban/)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-red?logo=gmail)](mailto:amr.elghadban@gmail.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/amrelghadban/)
+
+[![WhatsApp](https://img.shields.io/badge/whatsapp-00971543233227-green?logo=whatsapp)](https://api.whatsapp.com/send/?phone=00971543233227&text=Hi%20&app_absent=0)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)](https://github.com/amrangry) [![StackOverflow](https://img.shields.io/badge/StackOverflow-Profile-orange?logo=stackoverflow)](https://stackoverflow.com/users/1316779/amrangry)
 
-[![Twitter (formerly Twitter)](https://img.shields.io/badge/Twitter-Profile-blue?logo=twitter)](https://x.com/intent/follow?screen_name=amr_elghadban) [![Facebook](https://img.shields.io/badge/Facebook-Profile-blue?logo=facebook)](https://facebook.com/amr.elghadban) [![Website](https://img.shields.io/badge/Website-Visit%20Me-blue?logo=globe)](https://amrangry.github.io/)
+[![Twitter (formerly Twitter)](https://img.shields.io/badge/Twitter-@amr_elghadban-blue?logo=twitter)](https://x.com/intent/follow?screen_name=amr_elghadban) [![Facebook](https://img.shields.io/badge/Facebook-Profile-blue?logo=facebook)](https://facebook.com/amr.elghadban) [![Website](https://img.shields.io/badge/Website-Visit%20Me-blue?logo=globe)](https://amrangry.github.io/)
        <div align="center" >
 	       <a href = "https://www.buymeacoffee.com/amrangry">
 		    <img src = "https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=your-username&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"/>
