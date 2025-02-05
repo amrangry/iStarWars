@@ -76,7 +76,7 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
         // Fetch from the network
         do {
             var planet: Planet = try await apiClient.request(url)
-            planet.index = id
+            planet.index = id  // assigne the index with `id`
             // Cache the response
             if let data = try? JSONEncoder().encode(planet) {
                 cacheManager.cache(data, for: url)

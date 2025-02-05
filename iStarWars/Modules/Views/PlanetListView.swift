@@ -14,7 +14,6 @@ struct PlanetListView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
     
     var body: some View {
-        // NavigationView {
         NavigationStack(path: $coordinator.navigationPath) {
             List {
                 if viewModel.isLoading {

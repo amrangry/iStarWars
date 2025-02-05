@@ -24,7 +24,7 @@ struct ShimmerView: View {
             .onAppear {
                 isAnimating = true
             }
-            .accessibility(label: Text("Loading Data...".localized)) // Use `accessibility(label:)` here
+            .accessibility(label: Text("Loading Data...".localized)) // Use `accessibility(label:)`
     }
     
 }
