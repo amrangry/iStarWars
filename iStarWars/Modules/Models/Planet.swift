@@ -32,6 +32,18 @@ struct Planet: Codable, Identifiable {
     
 }
 
+extension Planet: KeyIdentifiable {
+    
+    var identifierKey: ValueWrapper? {
+        if let value = index {
+            return ValueWrapper.string(value)
+        } else {
+            return nil
+        }
+    }
+    
+}
+
 // all associated values in the NavigationPath enum need conform to Hashable and Equatable
 extension Planet: Equatable {
     
