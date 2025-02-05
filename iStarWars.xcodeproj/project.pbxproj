@@ -28,6 +28,7 @@
 		11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		11B3AC3F2D43D9BF009CCAE0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		11B3AC422D43D9BF009CCAE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		11C4530D2D4FC608006CF1BF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		11E4CA612D46919200055DAE /* open_terminal.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = open_terminal.sh; sourceTree = "<group>"; };
 		11E4CA622D46919200055DAE /* RemoveATSExceptions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoveATSExceptions.sh; sourceTree = "<group>"; };
 		11E4CA632D46919200055DAE /* SetBuildNumber.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SetBuildNumber.sh; sourceTree = "<group>"; };
@@ -82,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11C4530C2D4FC608006CF1BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11C4530D2D4FC608006CF1BF /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11E4CA662D46919200055DAE /* scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +116,7 @@
 				11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */,
 				11B3AC3F2D43D9BF009CCAE0 /* LICENSE */,
 				11B3AC422D43D9BF009CCAE0 /* README.md */,
+				11C4530C2D4FC608006CF1BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
