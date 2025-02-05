@@ -9,7 +9,6 @@ import Foundation
 
 /// PlanetsResponse Entity
 struct PlanetsResponse: Codable {
-    
     let results: [Planet]
     let count: Int
     let next: String?
@@ -17,5 +16,4 @@ struct PlanetsResponse: Codable {
     //    "count": 60,
     //    "next": "https://swapi.dev/api/planets/?page=2",
     //    "previous": null,
-    
 }
