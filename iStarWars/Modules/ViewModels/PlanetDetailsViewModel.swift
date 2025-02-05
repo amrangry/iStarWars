@@ -26,14 +26,14 @@ class PlanetDetailsViewModel: ObservableObject {
     
     // MARK: - Methods
     func fetchPlanetDetails() {
-        guard let id = planet?.index else { return }
-        
+        //guard let identifierKey = planet?.index else { return }
+        guard let identifierKey = planet?.identifierKey?.stringValue else { return }
         isLoading = true
         errorMessage = nil
         
         Task {
             do {
-                let planet = try await useCase.execute(parameter: id)
+                let planet = try await useCase.execute(parameter: identifierKey)
                 await MainActor.run {
                     self.planet = planet
                     self.isLoading = false
