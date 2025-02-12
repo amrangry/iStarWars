@@ -12,7 +12,7 @@ import SwiftUI
 class AppCoordinator: ObservableObject {
 
     @Published var navigationPath = [NavigationPath]()
-
+    
     private let sceneConfigurator = SceneConfigurator.shared
 
     func navigate(to path: NavigationPath) {
