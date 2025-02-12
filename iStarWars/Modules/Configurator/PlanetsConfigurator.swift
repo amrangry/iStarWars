@@ -8,7 +8,7 @@
 import Foundation
 
 /// PlanetsConfigurator acting as scene configurator
-class PlanetsConfigurator: ObservableObject {
+class PlanetsConfigurator {
     
     static func configure(client: DataClientProtocol, cacheManager: CacheManagerProtocol) -> PlanetsViewModel {
         let apiClient = client

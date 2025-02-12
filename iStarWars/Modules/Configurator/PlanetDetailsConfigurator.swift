@@ -8,7 +8,7 @@
 import Foundation
 
 /// PlanetDetailsConfigurator acting as scene configurator
-class PlanetDetailsConfigurator: ObservableObject {
+class PlanetDetailsConfigurator {
     
     static func configure(client: DataClientProtocol, cacheManager: CacheManagerProtocol, model: Planet) -> PlanetDetailsViewModel { // swiftlint:disable:this line_length
         let apiClient = client
