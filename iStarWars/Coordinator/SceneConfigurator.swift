@@ -11,6 +11,7 @@ import Foundation
 class SceneConfigurator {
     
     static let shared = SceneConfigurator()
+    
     let apiClient: DataClientProtocol
     let cacheManager: CacheManagerProtocol
     
