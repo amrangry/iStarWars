@@ -10,7 +10,7 @@ import Combine
 
 /// The `PlanetRepositoryAPI` mediates between the `APIClient` and the `UseCase`, It abstracts the data source (e.g., API).
 class PlanetRepositoryAPI: PlanetRepositoryProtocol {
-    
+
     private let apiClient: DataClientProtocol
     private let cacheManager: CacheManagerProtocol
 
@@ -18,13 +18,13 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
         self.apiClient = apiClient
         self.cacheManager = cacheManager
     }
-    
+
     /// Combine
     func fetchPlanets() -> AnyPublisher<[Planet], Error> {
         guard let url = Endpoints.planets.url else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
-        
+
         // Check for cached data
         if let cachedData = cacheManager.data(for: url),
            let cachedPlanets = try? JSONDecoder().decode([Planet].self, from: cachedData) {
@@ -32,7 +32,7 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
         }
-        
+
         return apiClient.request(url)
             .map { (response: PlanetsResponse) -> [Planet] in
                 // Assign identifiers based on the array index
@@ -41,12 +41,12 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
                     planetWithIdentifier.index = "\(index + 1)" // Start from 1
                     return planetWithIdentifier
                 }
-                
+
                 // Cache the modified planets
                 if let data = try? JSONEncoder().encode(planets) {
                     self.cacheManager.cache(data, for: url)
                 }
-                
+
                 return planets
             }
             .mapError { error -> Error in
@@ -66,18 +66,18 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
         guard let url = Endpoints.planetDetails(id).url else {
             throw URLError(.badURL)
         }
-        
+
         // Check for cached data
         if let cachedData = cacheManager.data(for: url),
            let cachedPlanet = try? JSONDecoder().decode(Planet.self, from: cachedData) {
             return cachedPlanet
         }
-        
+
         // Fetch from the network
         do {
             var planet: Planet = try await apiClient.request(url)
             planet.index = id  // assigne the index with `id`
-            // Cache the response
+                               // Cache the response
             if let data = try? JSONEncoder().encode(planet) {
                 cacheManager.cache(data, for: url)
             }
@@ -89,7 +89,7 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
         } catch {
             throw CustomError.unknownError
         }
-        
+
     }
-    
+
 }
