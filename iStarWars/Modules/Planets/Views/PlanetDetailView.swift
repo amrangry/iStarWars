@@ -21,7 +21,6 @@ struct PlanetDetailView: View {
                 } else if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
                         .foregroundColor(.red)
-                } else if let planetDetails = viewModel.planet {
                     Text(planetDetails.name ?? "")
                         .font(.largeTitle)
                         .bold()
