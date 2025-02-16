@@ -25,9 +25,9 @@ struct PlanetRowView: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .accessibilityIdentifier("terrainLabel")
-            if let population = planet.population {
+            if let population = planet.population?.intValue {
                 Text(
-                    "Population: \(population.stringValue.integerDecoration)"
+                    "Population: \(population.stringDecoration)"
                 )
                 .font(.subheadline)
                 .foregroundColor(.secondary)
