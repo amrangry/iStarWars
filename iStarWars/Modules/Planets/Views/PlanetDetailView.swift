@@ -47,7 +47,7 @@ struct PlanetDetailView: View {
                         Text("Population")
                             .font(.title2)
                             .bold()
-                        Text(planetDetails.population ?? "")
+                        Text(planet.population?.stringValue ?? "")
                             .font(.body)
                             .foregroundColor(.secondary)
                     }
