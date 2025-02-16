@@ -20,6 +20,13 @@ class SceneConfigurator {
         self.cacheManager = CacheManager.shared
     }
     
+    func configurePeopleViewModel() -> PeopleViewModel {
+        let apiClient = apiClient
+        let cacheManager = cacheManager
+        let viewModel = PeopleConfigurator.configure(client: apiClient, cacheManager: cacheManager)
+        return viewModel
+    }
+    
     // PlanetListView Dependencies
     func configurePlanetViewModel() -> PlanetsViewModel {
         let apiClient = apiClient

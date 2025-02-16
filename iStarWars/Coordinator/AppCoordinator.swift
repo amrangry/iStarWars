@@ -36,6 +36,8 @@ class AppCoordinator: ObservableObject {
             case .planetDetail(let planet):
                 let planetDetailViewModel = sceneConfigurator.configurePlanetDetailsViewModel(planet: planet)
                 PlanetDetailView(planet: planet, viewModel: planetDetailViewModel)
+            case .peopleList:
+                PeopleListView(viewModel: sceneConfigurator.configurePeopleViewModel())
         }
     }
     
