@@ -28,6 +28,12 @@ struct PlanetListView: View {
                         .foregroundColor(.red)
                 } else {
                     ForEach(viewModel.planets) { planet in
+//                        NavigationLink(
+//                            value: NavigationPath.planetDetail(planet: planet)
+//                        ) {
+//                            PlanetRowView(planet: planet)
+//                            //Text("\(planet.name)")
+//                        }
                         NavigationLink(value: NavigationPath.planetDetail(planet: planet)) {
                             PlanetRowView(planet: planet)
                         }
