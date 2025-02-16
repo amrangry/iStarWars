@@ -22,9 +22,9 @@ struct PlanetDetailView: View {
                     Text(errorMessage)
                         .foregroundColor(.red)
                 } else if let planet = viewModel.planet {
-                    Text(planet.name ?? "")
-                        .font(.largeTitle)
-                        .bold()
+//                    Text(planet.name ?? "")
+//                        .font(.largeTitle)
+//                        .bold()
                     TitleDetailView(title: "Climate:", detail: planet.terrain ?? "")
                     TitleDetailView(title: "Terrain:", detail: planet.terrain ?? "")
                     TitleDetailView(title: "Population:", detail: planet.population?.stringValue ?? "")
