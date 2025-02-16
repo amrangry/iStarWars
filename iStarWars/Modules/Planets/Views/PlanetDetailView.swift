@@ -40,15 +40,10 @@ struct PlanetDetailView: View {
 
 }
 
-// #Preview {
-//    let respoirtory = PlanetRepositoryProtocolMock()
-//    let usecase = FetchPlanetDetailsUseCase(repository: respoirtory)
-//    let planet: Planet = .mock()
-//    let viewModel =  PlanetDetailsViewModel(useCase: usecase, planet: planet)
-//
-//
-//    PlanetDetailView(
-//        planet: .mock(),
-//        viewModel: viewModel)
-//    )
-// }
+#Preview {
+    let respoirtory = PlanetRepositoryProtocolMock()
+    let usecase = FetchPlanetDetailsUseCase(repository: respoirtory)
+    let planet: Planet = .mock()
+    let viewModel =  PlanetDetailsViewModel(usecase: usecase, planet: planet)
+    return PlanetDetailView(viewModel: viewModel)
+}

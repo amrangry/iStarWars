@@ -55,6 +55,11 @@ struct PlanetListView: View {
 
 }
 
-// #Preview {
-//    PlanetListView()
-// }
+#Preview {
+    let respoirtory = PlanetRepositoryProtocolMock()
+    let usecase = FetchPlanetsUseCase(repository: respoirtory)
+    let viewModel =  PlanetsViewModel(usecase: usecase)
+    // Create a mock coordinator
+    let coordinator = AppCoordinator()
+    return PlanetListView(viewModel: viewModel).environmentObject(coordinator)
+}
