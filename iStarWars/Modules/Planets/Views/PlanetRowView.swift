@@ -40,8 +40,7 @@ struct PlanetRowView: View {
 }
 
 #Preview("Planet Row", traits: .sizeThatFitsLayout) {
-    // Create a mock Planet object for the preview
-    let mockPlanet = Planet.mock()
-    return PlanetRowView(planet: mockPlanet)
+    let planet = Planet.mock()
+    return PlanetRowView(planet: planet)
         .padding()
 }
