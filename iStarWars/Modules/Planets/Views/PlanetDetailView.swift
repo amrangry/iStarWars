@@ -13,7 +13,7 @@ struct PlanetDetailView: View {
     let planet: Planet
     // @StateObject private var viewModel = PlanetDetailsViewModel()
     @ObservedObject var viewModel: PlanetDetailsViewModel
-    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -26,7 +26,7 @@ struct PlanetDetailView: View {
                     Text(planetDetails.name ?? "")
                         .font(.largeTitle)
                         .bold()
-                    
+
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Climate")
                             .font(.title2)
@@ -35,7 +35,7 @@ struct PlanetDetailView: View {
                             .font(.body)
                             .foregroundColor(.secondary)
                     }
-                    
+
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Terrain")
                             .font(.title2)
@@ -44,7 +44,7 @@ struct PlanetDetailView: View {
                             .font(.body)
                             .foregroundColor(.secondary)
                     }
-                    
+
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Population")
                             .font(.title2)
@@ -57,11 +57,23 @@ struct PlanetDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(planet.name ?? "")
+        .navigationTitle(viewModel.planet?.name ?? "")
         .onAppear {
-            viewModel.planet = planet
             viewModel.fetchPlanetDetails()
         }
     }
-    
+
 }
+
+// #Preview {
+//    let respoirtory = PlanetRepositoryProtocolMock()
+//    let usecase = FetchPlanetDetailsUseCase(repository: respoirtory)
+//    let planet: Planet = .mock()
+//    let viewModel =  PlanetDetailsViewModel(useCase: usecase, planet: planet)
+//
+//
+//    PlanetDetailView(
+//        planet: .mock(),
+//        viewModel: viewModel)
+//    )
+// }
