@@ -1,0 +1,7 @@
+module: iStarWars
+author: Amr Ahmed Elghadban
+author_url: https://amrangry.github.io/
+github_url: https://github.com/amrangry/istarwars
+output: docs
+theme: fullwidth
+clean: true
