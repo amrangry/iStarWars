@@ -58,5 +58,5 @@ extension String {
     var isValidAlphaNumeric: Bool {
         return range(of: "[^a-zA-Z0-9]", options: .regularExpression, range: nil, locale: nil) == nil
     }
-    
+
 }
