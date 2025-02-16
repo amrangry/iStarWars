@@ -35,6 +35,7 @@
 		11E4CA642D46919200055DAE /* 1_update_sandboxing.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = 1_update_sandboxing.sh; sourceTree = "<group>"; };
 		11E4CA652D46919200055DAE /* unused.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused.rb; sourceTree = "<group>"; };
 		11E4CDCA2D46EBE900055DAE /* 2_swiftlint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = 2_swiftlint.sh; sourceTree = "<group>"; };
+		11E7D78D2D62830500913F83 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
 		11FFF9E02D4223F100CDFCD6 /* iStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9F12D4223F300CDFCD6 /* iStarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FFF9FB2D4223F300CDFCD6 /* iStarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +115,7 @@
 				11FFF9E12D4223F100CDFCD6 /* Products */,
 				11B3AC3C2D43D9BF009CCAE0 /* .gitignore */,
 				11B3AC3D2D43D9BF009CCAE0 /* .swiftlint.yml */,
+				11E7D78D2D62830500913F83 /* .jazzy.yaml */,
 				11B3AC3F2D43D9BF009CCAE0 /* LICENSE */,
 				11B3AC422D43D9BF009CCAE0 /* README.md */,
 				11C4530C2D4FC608006CF1BF /* Frameworks */,
