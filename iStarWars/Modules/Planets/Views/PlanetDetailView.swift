@@ -16,6 +16,7 @@ struct PlanetDetailView: View {
 
     var body: some View {
         ScrollView {
+            VStack(alignment: .leading) {
                 if viewModel.isLoading {
                     ProgressView()
                 } else if let errorMessage = viewModel.errorMessage {
