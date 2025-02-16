@@ -9,10 +9,10 @@ import SwiftUI
 
 /// PlanetListView display the list
 struct PlanetListView: View {
-    
+
     @StateObject var viewModel: PlanetsViewModel
     @EnvironmentObject private var coordinator: AppCoordinator
-    
+
     var body: some View {
         NavigationStack(path: $coordinator.navigationPath) {
             List {
@@ -52,7 +52,7 @@ struct PlanetListView: View {
             }
         }
     }
-    
+
 }
 
 // #Preview {
