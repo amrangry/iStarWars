@@ -10,30 +10,29 @@ import Combine
 
 /// PlanetsViewModel Model
 class PlanetsViewModel: ObservableObject {
-    
+
     // MARK: - Published Properties
-    
+
     @Published var planets: [Planet] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
-    
+
     // MARK: - Dependencies
-    
+
     private let fetchPlanetsUseCase: FetchPlanetsUseCase
     private var cancellables = Set<AnyCancellable>()
-    
+
     // MARK: - Initializer
-    
+
     init(fetchPlanetsUseCase: FetchPlanetsUseCase) {
         self.fetchPlanetsUseCase = fetchPlanetsUseCase
     }
-    
     // MARK: - Methods
-    
+
     func fetchPlanets() {
         isLoading = true
         errorMessage = nil
-        
+
         fetchPlanetsUseCase.execute()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
@@ -49,5 +48,5 @@ class PlanetsViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
 }

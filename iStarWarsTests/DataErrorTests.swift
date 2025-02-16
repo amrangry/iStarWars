@@ -19,7 +19,7 @@ class DataErrorTests: XCTestCase {
         XCTAssertNotNil(message, "Error message shouldn't be nil")
         XCTAssertEqual(message, "Invalid data", "Error message should be matched")
     }
-    
+
     func testDecodingError() {
         // Given
         let testValue = "some description"

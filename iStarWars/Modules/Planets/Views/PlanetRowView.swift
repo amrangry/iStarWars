@@ -9,9 +9,9 @@ import SwiftUI
 
 /// The `PlanetRowView` is a reusable component that represents a single row in the list of planets
 struct PlanetRowView: View {
- 
+
     let planet: Planet
- 
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(planet.name ?? "")

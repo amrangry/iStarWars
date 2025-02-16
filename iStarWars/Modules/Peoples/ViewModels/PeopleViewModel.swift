@@ -10,30 +10,30 @@ import Combine
 
 /// PeopleViewModel Model
 class PeopleViewModel: ObservableObject {
-    
+
     // MARK: - Published Properties
-    
+
     @Published var peoples: [People] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
-    
+
     // MARK: - Dependencies
-    
+
     private let fetchUseCase: FetchPeopleUseCase
     private var cancellables = Set<AnyCancellable>()
-    
+
     // MARK: - Initializer
-    
+
     init(fetchUseCase: FetchPeopleUseCase) {
         self.fetchUseCase = fetchUseCase
     }
-    
+
     // MARK: - Methods
-    
+
     func fetchPeople() {
         isLoading = true
         errorMessage = nil
-        
+
         fetchUseCase.execute()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
@@ -49,5 +49,5 @@ class PeopleViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
 }

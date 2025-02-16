@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 protocol PeopleRespsitoryProtcol {
-    
+
     /// Combine
     func fetchPeople() -> AnyPublisher<[People], Error>
-    
+
 }

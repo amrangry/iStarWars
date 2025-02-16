@@ -9,24 +9,24 @@ import XCTest
 @testable import iStarWars
 
 class CachedManagerTests: XCTestCase {
-    
+
     var cacheManager: CacheManager!
     let testData = Data("myTestData".utf8)
     let testURL = URL(string: "https://amrangry.github.io/api/data")! // swiftlint:disable:this force_unwrapping
-    
+
     override func setUp() {
         super.setUp()
-        
+
         cacheManager = CacheManager.shared
         cacheManager.clearCache() // Clear cache before each test
     }
-    
+
     override func tearDown() {
         super.tearDown()
-        
+
         cacheManager.clearCache() // Clear cache after each test
     }
-    
+
     func testRetunCashedDataIfExistAndNotExpired() {
         // Given
         cacheManager.cache(testData, for: testURL)
@@ -36,7 +36,7 @@ class CachedManagerTests: XCTestCase {
         XCTAssertNotNil(dataFromCache, "Data not found in cache")
         XCTAssertEqual(dataFromCache, testData, "Data in cache is not equal")
     }
-    
+
     func testRetunCashedDataIfExpired() {
         // Given
         cacheManager.cache(testData, for: testURL)
@@ -57,11 +57,11 @@ class CachedManagerTests: XCTestCase {
         XCTAssertNotNil(dataFromCache, "Data found in cache even though it is expired")
         XCTAssertEqual(dataFromCache, testData, "Data in cache is not equal")
     }
-    
+
     func testRetunCashedDataWhenNotExist() {
         // Given
         // When
         // Then
     }
-    
+
 }

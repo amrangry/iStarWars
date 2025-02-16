@@ -9,24 +9,24 @@ import Foundation
 
 /// The SceneConfigurator handles dependency injection, keeping the view code clean and focused on UI.
 class SceneConfigurator {
-    
+
     static let shared = SceneConfigurator()
-    
+
     let apiClient: DataClientProtocol
     let cacheManager: CacheManagerProtocol
-    
+
     private init() {
         self.apiClient = APIClient.shared
         self.cacheManager = CacheManager.shared
     }
-    
+
     func configurePeopleViewModel() -> PeopleViewModel {
         let apiClient = apiClient
         let cacheManager = cacheManager
         let viewModel = PeopleConfigurator.configure(client: apiClient, cacheManager: cacheManager)
         return viewModel
     }
-    
+
     // PlanetListView Dependencies
     func configurePlanetViewModel() -> PlanetsViewModel {
         let apiClient = apiClient
@@ -34,7 +34,7 @@ class SceneConfigurator {
         let viewModel = PlanetsConfigurator.configure(client: apiClient, cacheManager: cacheManager)
         return viewModel
     }
-    
+
     // PlanetDetailView Dependencies
     func configurePlanetDetailsViewModel(planet: Planet) -> PlanetDetailsViewModel {
         let apiClient = apiClient
@@ -42,5 +42,5 @@ class SceneConfigurator {
         let viewModel = PlanetDetailsConfigurator.configure(client: apiClient, cacheManager: cacheManager, model: planet) // swiftlint:disable:this line_length
         return viewModel
     }
-    
+
 }

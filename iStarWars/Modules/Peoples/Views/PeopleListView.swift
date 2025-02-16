@@ -9,10 +9,10 @@ import SwiftUI
 
 /// PeopleListView display the list
 struct PeopleListView: View {
-    
+
     @StateObject var viewModel: PeopleViewModel
    // @EnvironmentObject private var coordinator: AppCoordinator
-    
+
     var body: some View {
         List {
             if viewModel.isLoading {
@@ -39,9 +39,9 @@ struct PeopleListView: View {
             }
         }
     }
-    
+
 }
 
-//#Preview {
+// #Preview {
 //    PeopleListView()
-//}
+// }

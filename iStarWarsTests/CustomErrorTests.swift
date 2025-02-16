@@ -17,7 +17,7 @@ class CustomErrorTests: XCTestCase {
 
         // When
         let valueDescription = customError.errorDescription
-    
+
         // Then
         XCTAssertNotNil(valueDescription, "Error description should not be nil")
         XCTAssertEqual(valueDescription, "Error: \(testName)", "Error description should match")

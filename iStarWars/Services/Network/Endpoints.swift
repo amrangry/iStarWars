@@ -9,15 +9,15 @@ import Foundation
 
 /// API Endpoints 
 enum Endpoints {
-    
+
     case peoples
     case planets
     case planetDetails(String)
     case peopleDirect(String)
-    
+
     var url: URL? {
         let baseURL = Constants.baseURL
-        
+
         switch self {
             case .peopleDirect(let path):
                  return URL(string: path)
@@ -36,5 +36,5 @@ enum Endpoints {
                 return URL(string: "\(baseURL)/planets/\(parameter)")
         }
     }
-    
+
 }

@@ -9,7 +9,7 @@ import Foundation
 
 /// Planets extension
 extension Planet {
-  
+
     /// The mockPlanet object provides sample data for the preview.
     /// - Returns: `Planet`
     static func mock() -> Planet {
@@ -38,5 +38,5 @@ extension Planet {
         )
         return mockPlanet
     }
-    
+
 }

@@ -60,7 +60,7 @@ class PlanetRepositoryAPI: PlanetRepositoryProtocol {
             }
             .eraseToAnyPublisher()
     }
-    
+
     /// Async/Await
     func fetchPlanetDetails(id: String) async throws -> Planet {
         guard let url = Endpoints.planetDetails(id).url else {

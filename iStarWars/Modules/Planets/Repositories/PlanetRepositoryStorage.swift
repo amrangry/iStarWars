@@ -9,18 +9,18 @@ import Foundation
 import Combine
 
 class PlanetRepositoryStorage: PlanetRepositoryProtocol {
-    
+
     func fetchPlanets() -> AnyPublisher<[Planet], any Error> {
-        //TODO - implementation
-        let planets = [Planet.mock(), Planet.mock()];
+        // TODO - implementation
+        let planets = [Planet.mock(), Planet.mock()]
         return Just(planets)
-            .setFailureType(to: Error.self) //to align with the return type (Publisher)
+            .setFailureType(to: Error.self) // to align with the return type (Publisher)
             .eraseToAnyPublisher()
     }
-    
+
     func fetchPlanetDetails(id: String) async throws -> Planet {
-        //TODO - implementation
+        // TODO - implementation
         Planet.mock()
     }
-    
+
 }

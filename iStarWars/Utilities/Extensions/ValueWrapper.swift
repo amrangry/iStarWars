@@ -40,7 +40,7 @@ public protocol DataConvertible {
 }
 
 extension ValueWrapper: Hashable {
-    
+
 }
 
 extension ValueWrapper: Displayable { }
@@ -51,7 +51,7 @@ public enum ValueWrapper: Codable {
     case double(Double)
     case bool(Bool)
     case data(Data)
-    
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let value = try? container.decode(String.self) {
@@ -76,7 +76,7 @@ public enum ValueWrapper: Codable {
         }
         throw DecodingError.typeMismatch(ValueWrapper.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for ValueWrapper"))
     }
-    
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -92,7 +92,7 @@ public enum ValueWrapper: Codable {
                 try container.encode(value)
         }
     }
-    
+
 }
 
 // MARK: - extension StringConvertible Protocol Conform
@@ -147,10 +147,10 @@ extension ValueWrapper: DoubleConvertible {
         var result: Double?
         switch self {
             case let .string(value):
-                //Way 1 Remove commas from the string
+                // Way 1 Remove commas from the string
                 //            let cleanedValue = value.replacingOccurrences(of: ",", with: "")
                 //            result = Double(cleanedValue)
-                //Way 2 Use NumberFormatter to handle different number formats
+                // Way 2 Use NumberFormatter to handle different number formats
                 let numberFormatter = NumberFormatter()
                 numberFormatter.numberStyle = .decimal
                 result = numberFormatter.number(from: value)?.doubleValue
@@ -167,7 +167,7 @@ extension ValueWrapper: DoubleConvertible {
                 // Use NumberFormatter to handle different number formats
                 numberFormatter.numberStyle = .decimal
                 result = numberFormatter.number(from: string)?.doubleValue
-                //result = Double(string)
+                // result = Double(string)
         }
         return result
     }
@@ -204,7 +204,7 @@ extension ValueWrapper: DataConvertible {
             default:
                 let value = self.stringValue
                 result = value.data(using: .utf8)
-                //result = try? JSONEncoder().encode(self)
+                // result = try? JSONEncoder().encode(self)
         }
         //        switch self {
         //        case let .string(value):
@@ -221,4 +221,3 @@ extension ValueWrapper: DataConvertible {
         return result
     }
 }
-

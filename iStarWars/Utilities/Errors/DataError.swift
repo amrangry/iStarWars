@@ -23,5 +23,5 @@ enum DataError: Error, LocalizedError {
                 return "Invalid data"
         }
     }
-    
+
 }

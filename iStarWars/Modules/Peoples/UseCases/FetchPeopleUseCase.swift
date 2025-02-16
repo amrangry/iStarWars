@@ -8,15 +8,15 @@ import Foundation
 import Combine
 
 class FetchPeopleUseCase {
-    
+
     private let repository: PeopleRespsitoryProtcol
-    
+
     init(repository: PeopleRespsitoryProtcol) {
         self.repository = repository
     }
-    
+
     func execute() -> AnyPublisher<[People], Error> {
         return repository.fetchPeople()
     }
-    
+
 }

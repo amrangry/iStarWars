@@ -12,9 +12,9 @@ import Combine
 protocol APIClientProtocol {
     // Combine
     func request<T: Decodable>(_ url: URL) -> AnyPublisher<T, Error>
-    
+
     // Async/Await
     func request<T: Decodable>(_ url: URL) async throws -> T
     func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T
-    
+
 }

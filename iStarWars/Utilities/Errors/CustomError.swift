@@ -9,10 +9,10 @@ import Foundation
 
 /// CustomError is an enum that conforms to the Error and LocalizedError protocols.
 enum CustomError: Error, LocalizedError {
-    
+
     case error(description: String)
     case unknownError
-    
+
     // Provide user-friendly error messages
     var errorDescription: String? {
         switch self {
@@ -22,5 +22,5 @@ enum CustomError: Error, LocalizedError {
                 return "An unknown error occurred"
         }
     }
-    
+
 }

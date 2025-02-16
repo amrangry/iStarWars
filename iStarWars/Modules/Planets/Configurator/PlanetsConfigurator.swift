@@ -9,7 +9,7 @@ import Foundation
 
 /// PlanetsConfigurator acting as scene configurator
 class PlanetsConfigurator {
-    
+
     static func configure(client: DataClientProtocol, cacheManager: CacheManagerProtocol) -> PlanetsViewModel {
         let apiClient = client
         let cacheManager = cacheManager
@@ -18,6 +18,5 @@ class PlanetsConfigurator {
         let planetViewModel = PlanetsViewModel(fetchPlanetsUseCase: useCase)
         return planetViewModel
     }
-    
-}
 
+}

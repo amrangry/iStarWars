@@ -12,30 +12,30 @@ import Combine
 
 // MARK: - APIClient Tests
 class APIClientUsingMockTests: XCTestCase {
-    
+
     var mockAPIClient: MockAPIClient!
     var cancellables: Set<AnyCancellable>!
     let baseURL = URL(string: "https://amrangry.github.io/api/data")!  // swiftlint:disable:this force_unwrapping
-    
+
     override func setUp() {
         super.setUp()
         mockAPIClient = MockAPIClient()
         cancellables = []
     }
-    
+
     override func tearDown() {
         mockAPIClient = nil
         cancellables = nil
         super.tearDown()
     }
-    
+
     // MARK: - Combine Test
     func testCombineRequest() {
         // Arrange
         let mockURL = baseURL
         let expectedName = MockResponse.getMockedName()
         let expectation = self.expectation(description: "Combine request completes")
-        
+
         // Act
         mockAPIClient.request(mockURL)
             .sink(receiveCompletion: { completion in
@@ -48,33 +48,33 @@ class APIClientUsingMockTests: XCTestCase {
                 expectation.fulfill()
             })
             .store(in: &cancellables)
-        
+
         // Wait
         wait(for: [expectation], timeout: 1.0)
     }
-    
+
     // MARK: - Async/Await Test
     func testAsyncRequest() async throws {
         // Arrange
         let mockURL = baseURL
         let expectedName = MockResponse.getMockedName()
-        
+
         do {
             // Act
             let response: MockResponse = try await mockAPIClient.request(mockURL)
-            
+
             // Assert
             XCTAssertEqual(response.name, expectedName)
         } catch {
             XCTFail("Request failed with error: \(error)")
         }
     }
-    
+
     // MARK: - Validation Error Test
     func testValidationError() async throws {
         // Arrange
         let mockURL = baseURL
-        
+
         do {
             // Act
             let _: MockResponse = try await mockAPIClient.request(mockURL)
@@ -84,5 +84,5 @@ class APIClientUsingMockTests: XCTestCase {
             XCTAssertTrue(error is URLError, "Expected URLError but got \(error)")
         }
     }
-    
+
 }

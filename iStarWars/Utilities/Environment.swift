@@ -9,11 +9,11 @@ import Foundation
 
 /// Application Environment
 enum Environment {
-    
+
     case development
     case staging
     case production
-    
+
     var baseURL: String {
         switch self {
             case .development:
@@ -24,5 +24,5 @@ enum Environment {
                 return "https://swapi.dev/api"
         }
     }
-    
+
 }

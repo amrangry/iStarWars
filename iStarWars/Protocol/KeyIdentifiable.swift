@@ -11,6 +11,6 @@ import Foundation
 /// The KeyIdentifiable protocol is designed to provide a way for conforming types to expose a unique identifier key.
 protocol KeyIdentifiable {
     associatedtype Key: Hashable
-    
+
     var identifierKey: Key { get }
 }

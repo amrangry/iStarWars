@@ -11,5 +11,5 @@ import Foundation
 /// Marker interface
 /// The project defines a protocol — Displayable — to simplify showing detailed information
 protocol Displayable {
-    
+
 }

@@ -9,7 +9,7 @@ import Foundation
 
 /// PeopleConfigurator acting as scene configurator
 class PeopleConfigurator {
-    
+
     static func configure(client: DataClientProtocol, cacheManager: CacheManagerProtocol) -> PeopleViewModel {
         let apiClient = client
         let cacheManager = cacheManager
@@ -18,5 +18,5 @@ class PeopleConfigurator {
         let viewModel = PeopleViewModel(fetchUseCase: useCase)
         return viewModel
     }
-    
+
 }
