@@ -19,13 +19,13 @@ class PlanetsViewModel: ObservableObject {
 
     // MARK: - Dependencies
 
-    private let fetchPlanetsUseCase: FetchPlanetsUseCase
+    private let usecase: FetchPlanetsUseCase
     private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Initializer
 
-    init(fetchPlanetsUseCase: FetchPlanetsUseCase) {
-        self.fetchPlanetsUseCase = fetchPlanetsUseCase
+    init(usecase: FetchPlanetsUseCase) {
+        self.usecase = usecase
     }
 
     // MARK: - Methods
@@ -34,7 +34,7 @@ class PlanetsViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
 
-        fetchPlanetsUseCase.execute()
+        usecase.execute()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false

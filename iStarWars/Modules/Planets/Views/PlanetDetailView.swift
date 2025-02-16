@@ -25,33 +25,9 @@ struct PlanetDetailView: View {
                     Text(planet.name ?? "")
                         .font(.largeTitle)
                         .bold()
-
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Climate")
-                            .font(.title2)
-                            .bold()
-                        Text(planet.climate ?? "")
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                    }
-
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Terrain")
-                            .font(.title2)
-                            .bold()
-                        Text(planet.terrain ?? "")
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                    }
-
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Population")
-                            .font(.title2)
-                            .bold()
-                        Text(planet.population?.stringValue ?? "")
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                    }
+                    TitleDetailView(title: "Climate:", detail: planet.terrain ?? "")
+                    TitleDetailView(title: "Terrain:", detail: planet.terrain ?? "")
+                    TitleDetailView(title: "Population:", detail: planet.population?.stringValue ?? "")
                 }
             }
             .padding()

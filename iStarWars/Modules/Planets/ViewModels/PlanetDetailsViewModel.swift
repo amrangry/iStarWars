@@ -16,11 +16,11 @@ class PlanetDetailsViewModel: ObservableObject {
     @Published var errorMessage: String?
 
     // MARK: - Dependencies
-    private let useCase: FetchPlanetDetailsUseCase
+    private let usecase: FetchPlanetDetailsUseCase
 
     // MARK: - Initializer
-    init(useCase: FetchPlanetDetailsUseCase, planet: Planet? = nil) {
-        self.useCase = useCase
+    init(usecase: FetchPlanetDetailsUseCase, planet: Planet? = nil) {
+        self.usecase = usecase
         self.planet = planet
     }
 
@@ -33,7 +33,7 @@ class PlanetDetailsViewModel: ObservableObject {
 
         Task {
             do {
-                let planet = try await useCase.execute(parameter: identifierKey)
+                let planet = try await usecase.execute(parameter: identifierKey)
                 await MainActor.run {
                     self.planet = planet
                     self.isLoading = false

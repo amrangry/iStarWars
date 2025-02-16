@@ -14,8 +14,8 @@ class PlanetsConfigurator {
         let apiClient = client
         let cacheManager = cacheManager
         let repository = PlanetRepositoryAPI(apiClient: apiClient, cacheManager: cacheManager)
-        let useCase = FetchPlanetsUseCase(repository: repository)
-        let planetViewModel = PlanetsViewModel(fetchPlanetsUseCase: useCase)
+        let usecase = FetchPlanetsUseCase(repository: repository)
+        let planetViewModel = PlanetsViewModel(usecase: usecase)
         return planetViewModel
     }
 
