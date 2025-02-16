@@ -137,10 +137,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11FFFA052D4223F300CDFCD6 /* Build configuration list for PBXNativeTarget "iStarWars" */;
 			buildPhases = (
+				11E7D6952D626CB000913F83 /* Swiftlint */,
 				11FFF9DC2D4223F100CDFCD6 /* Sources */,
 				11FFF9DD2D4223F100CDFCD6 /* Frameworks */,
 				11FFF9DE2D4223F100CDFCD6 /* Resources */,
-				11E7D6952D626CB000913F83 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -284,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, skipping.\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
