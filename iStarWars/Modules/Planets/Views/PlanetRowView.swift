@@ -13,7 +13,7 @@ struct PlanetRowView: View {
     let planet: Planet
  
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading) {
             Text(planet.name ?? "")
                 .font(.headline)
                 .accessibilityIdentifier("planetNameLabel")
@@ -25,10 +25,14 @@ struct PlanetRowView: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .accessibilityIdentifier("terrainLabel")
-            Text("Population: \(planet.population  ?? "")")
+            if let population = planet.population {
+                Text(
+                    "Population: \(population.stringValue.integerDecoration)"
+                )
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .accessibilityIdentifier("populationLabel")
+            }
         }
         .padding(.vertical, 8)
     }

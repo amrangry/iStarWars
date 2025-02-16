@@ -16,14 +16,14 @@ extension Planet {
         let mockPlanet = Planet(
             index: "1", // Unique identifier for the planet
             name: "Tatooine", // Name of the planet
-            rotationPeriod: "23", // Rotation period in hours
-            orbitalPeriod: "304", // Orbital period in days
-            diameter: "10465", // Diameter in kilometers
+            rotationPeriod: ValueWrapper.string("23"), // Rotation period in hours
+            orbitalPeriod: ValueWrapper.string("304"), // Orbital period in days
+            diameter: ValueWrapper.string("10465"), // Diameter in kilometers
             climate: "arid", // Climate of the planet
             gravity: "1 standard", // Gravity level
             terrain: "desert", // Terrain type
-            surfaceWater: "1", // Percentage of surface water
-            population: "200000", // Population of the planet
+            surfaceWater: ValueWrapper.string("1"), // Percentage of surface water
+            population: ValueWrapper.string("200000"), // Population of the planet
             residents: [ // Array of resident URLs (if any)
                 "https://swapi.dev/api/people/1/",
                 "https://swapi.dev/api/people/2/"
