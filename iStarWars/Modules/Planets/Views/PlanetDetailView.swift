@@ -9,8 +9,7 @@ import SwiftUI
 
 /// PlanetDetailView display the details
 struct PlanetDetailView: View {
-    
-    let planet: Planet
+
     // @StateObject private var viewModel = PlanetDetailsViewModel()
     @ObservedObject var viewModel: PlanetDetailsViewModel
 
