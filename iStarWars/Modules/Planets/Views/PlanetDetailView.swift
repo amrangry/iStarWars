@@ -39,6 +39,7 @@ struct PlanetDetailView: View {
                         Text("Terrain")
                             .font(.title2)
                             .bold()
+                        Text(planet.terrain ?? "")
                             .font(.body)
                             .foregroundColor(.secondary)
                     }
