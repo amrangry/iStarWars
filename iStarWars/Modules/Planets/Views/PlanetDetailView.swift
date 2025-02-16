@@ -29,6 +29,7 @@ struct PlanetDetailView: View {
                         Text("Climate")
                             .font(.title2)
                             .bold()
+                        Text(planet.climate ?? "")
                             .font(.body)
                             .foregroundColor(.secondary)
                     }
