@@ -27,6 +27,7 @@ class PlanetsViewModel: ObservableObject {
     init(fetchPlanetsUseCase: FetchPlanetsUseCase) {
         self.fetchPlanetsUseCase = fetchPlanetsUseCase
     }
+
     // MARK: - Methods
 
     func fetchPlanets() {
