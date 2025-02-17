@@ -224,6 +224,7 @@ Here are some ideas for future improvements:
 - [x] **CI/CD Pipeline**: Set up using GitHub Actions or Bitrise.  
 - [x] **Retry Mechanism**: Add a retry button for failed requests.  
 - [x] **Logging**: Log errors for debugging purposes. 
+- [x] **Docs**: use [jazz](https://github.com/realm/jazzy). 
 
 --------------- 
 ## **Author**
