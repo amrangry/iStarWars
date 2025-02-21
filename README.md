@@ -2,6 +2,7 @@
 <p align="center">
   <img src ="https://github.com/amrangry/iStarWars/blob/main/logo.png?raw=true" width="400" max-width="90%" alt="iStarWars" />
 </p>
+
 <p align="center">
   <strong align="center">iStarWars</strong>
 </p>
