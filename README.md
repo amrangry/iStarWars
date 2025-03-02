@@ -36,6 +36,13 @@ The **iStarWars iOS Project** is a fun little app that fetches and displays a li
 from the [Star Wars API (SWAPI)](https://swapi.dev/api).
 It’s built to show off some cool iOS development techniques while keeping things clean and easy to understand.  
 
+SWAPI - The Star Wars API [https://swapi.dev/](https://swapi.dev/)
+
+All the Star Wars data you've ever wanted:
+Planets, Spaceships, Vehicles, People, Films and Species
+From all SEVEN Star Wars films
+Now with The Force Awakens data!
+
 ---------------
 ## **Project Goals**  
 
