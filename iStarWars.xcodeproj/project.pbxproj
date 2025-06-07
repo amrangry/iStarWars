@@ -139,7 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11FFFA052D4223F300CDFCD6 /* Build configuration list for PBXNativeTarget "iStarWars" */;
 			buildPhases = (
-				11E7D6952D626CB000913F83 /* Swiftlint */,
+				1186CA492DF4FF1400703DAB /* SwiftLint */,
 				11FFF9DC2D4223F100CDFCD6 /* Sources */,
 				11FFF9DD2D4223F100CDFCD6 /* Frameworks */,
 				11FFF9DE2D4223F100CDFCD6 /* Resources */,
@@ -231,7 +231,7 @@
 			mainGroup = 11FFF9D72D4223F100CDFCD6;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				11E4CC192D46D97900055DAE /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				1186CA482DF4FEF900703DAB /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 11FFF9E12D4223F100CDFCD6 /* Products */;
@@ -270,7 +270,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11E7D6952D626CB000913F83 /* Swiftlint */ = {
+		1186CA492DF4FF1400703DAB /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,14 +279,14 @@
 			);
 			inputPaths = (
 			);
-			name = Swiftlint;
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Function to run SwiftLint\nrun_swiftlint() {\n    echo \"Running SwiftLint...\"\n    \"$1\" lint --quiet\n}\n\n# Try different paths where SwiftLint might be located\nSWIFTLINT_PATHS=(\n    # SPM artifact bundle path\n    \"${BUILD_DIR%Build/*}SourcePackages/artifacts/realm.SwiftLint/SwiftLint/swiftlint.artifactbundle/swiftlint-*/bin/swiftlint\"\n    # SPM checkout build path  \n    \"${BUILD_DIR%Build/*}SourcePackages/checkouts/SwiftLint/.build/release/swiftlint\"\n    # Homebrew path\n    \"/opt/homebrew/bin/swiftlint\"\n    \"/usr/local/bin/swiftlint\"\n    # System PATH\n    \"$(which swiftlint 2>/dev/null)\"\n)\n\nSWIFTLINT_FOUND=false\n\nfor path in \"${SWIFTLINT_PATHS[@]}\"; do\n    # Handle glob patterns\n    if [[ \"$path\" == *\"*\"* ]]; then\n        for expanded_path in $path; do\n            if [ -f \"$expanded_path\" ]; then\n                run_swiftlint \"$expanded_path\"\n                SWIFTLINT_FOUND=true\n                break 2\n            fi\n        done\n    elif [ -f \"$path\" ] && [ -n \"$path\" ]; then\n        run_swiftlint \"$path\"\n        SWIFTLINT_FOUND=true\n        break\n    fi\ndone\n\nif [ \"$SWIFTLINT_FOUND\" = false ]; then\n    echo \"warning: SwiftLint not found. Please ensure it's properly installed.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -468,7 +468,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "\"$(inherited) @executable_path/Frameworks @loader_path/Frameworks\"";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
@@ -508,7 +508,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "\"$(inherited) @executable_path/Frameworks @loader_path/Frameworks\"";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
@@ -652,12 +652,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		11E4CC192D46D97900055DAE /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+		1186CA482DF4FEF900703DAB /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.58.2;
+				minimumVersion = 0.59.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
