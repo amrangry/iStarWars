@@ -12,7 +12,7 @@ struct TitleDetailView: View {
     var detail: String = ""
 
     var body: some View {
-        HStack{
+        HStack {
             Text(title)
                 .font(.title2)
                 .bold()
@@ -25,5 +25,5 @@ struct TitleDetailView: View {
 }
 
 #Preview {
-    TitleDetailView(title: "Title:" , detail: "Details!")
+    TitleDetailView(title: "Title:", detail: "Details!")
 }

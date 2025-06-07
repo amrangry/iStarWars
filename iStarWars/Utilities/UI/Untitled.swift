@@ -17,10 +17,10 @@ import SwiftUI
 
 struct AddView: View {
 
-    // MARK:- variables
+    // MARK: - variables
     @State var isAnimating: Bool = false
 
-    // MARK:- views
+    // MARK: - views
     var body: some View {
         ZStack {
             Color.black
@@ -31,11 +31,11 @@ struct AddView: View {
                 ExpandingView(expand: $isAnimating, direction: .top, symbolName: "photo")
                 ExpandingView(expand: $isAnimating, direction: .right, symbolName: "mic.fill")
                 Image(systemName: "plus")
-                    .font(.system(size: 40, weight:  self.isAnimating ? .regular : .semibold, design: .rounded))
-                    .foregroundColor(.orange)//(self.isAnimating ? Color.white : Color.black)
-                    //.rotationEffect(self.isAnimating ? .degrees(45) : .degrees(0))
-                    //.scaleEffect(self.isAnimating ? 3 : 1)
-                    //.opacity(self.isAnimating ? 0.5 : 1)
+                    .font(.system(size: 40, weight: self.isAnimating ? .regular : .semibold, design: .rounded))
+                    .foregroundColor(.orange)// (self.isAnimating ? Color.white : Color.black)
+                    // .rotationEffect(self.isAnimating ? .degrees(45) : .degrees(0))
+                    // .scaleEffect(self.isAnimating ? 3 : 1)
+                    // .opacity(self.isAnimating ? 0.5 : 1)
                   //  .animation(Animation.spring(response: 0.35, dampingFraction: 0.85, blendDuration: 1))
                     .animation(.spring(duration: 0.35, bounce: 0.85, blendDuration: 1), value: isAnimating)
                     .onTapGesture {
@@ -94,11 +94,9 @@ enum ExpandDirection {
 //  Copyright © 2020 Shubham Singh. All rights reserved.
 //
 
-import SwiftUI
-
 struct ExpandingView: View {
 
-    // MARK:- variables
+    // MARK: - variables
     @Binding var expand: Bool
     var direction: ExpandDirection
     var symbolName: String
