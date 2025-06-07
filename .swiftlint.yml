@@ -46,7 +46,7 @@ remote_timeout: 10.0
 # We don't want to use swiftlint for our external dependencies.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
     - Pods
-    .build
+    - .build
     #- <ProjectDirectoryName>/<folder>
     #- <ProjectDirectoryName>/<folder>/<file>.<ext>
     
